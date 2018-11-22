@@ -1,0 +1,506 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            body{
+                user-select: none;
+            }
+            #wrap{
+                overflow: hidden;
+                position: relative;
+                width:500px;
+                height:600px;
+                margin:5px auto 0;
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+            #wrap .scroll{
+                position: absolute;
+                top:0;
+                right:0;
+                width: 10px;
+                height: 100%;
+                background-color: #55a532;
+            }
+            #wrap .scroll .bar{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #cc3366;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .content{
+                position: relative;
+            }
+            .content li{
+                padding: 5px 10px ;
+                margin-bottom: 2px;
+                margin-right: 10px;
+                background-color: #eee;
+            }
+            .content li p{
+                line-height: 24px;
+            }
+            .content li span{
+                margin-left: 25px;
+                line-height: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul class="content">
+                <li>
+                    <p>1、Life was like a box of chocolates, you never know what you're going to get.</p>
+                    <span>生命就像一盒巧克力，结果往往出人意料。</span>
+                </li>
+                <li>
+                    <p>2、Stupid is as stupid does.</p>
+                    <span>蠢人做蠢事，也可理解为傻人有傻福。</span>
+                </li>
+                <li>
+                    <p>3、Miracles happen every day.</p>
+                    <span>奇迹每天都在发生。</span>
+                </li>
+                <li>
+                    <p>4、it made me look like a duck in water.</p>
+                    <span>它让我如鱼得水。</span>
+                </li>
+                <li>
+                    <p>5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+                    <span>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</span>
+                </li>
+                <li>
+                    <p>6、Death is just a part of life, something we're all destined to do.</p>
+                    <span>死亡是生命的一部分，是我们注定要做的一件事。</span>
+                </li>
+                <li>
+                    <p>7、You have got to put the past behind you before you can move on.</p>
+                    <span>放下包袱，继续前进。</span>
+                </li>
+                <li>
+                    <p>8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+                    <span>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</span>
+                </li>
+                <li>
+                    <p>9、If there is anything you need, I will not be far away.</p>
+                    <span>只要你需要，我就在这里。</span>
+                </li>
+                <li>
+                    <p>1、Life was like a box of chocolates, you never know what you're going to get.</p>
+                    <span>生命就像一盒巧克力，结果往往出人意料。</span>
+                </li>
+                <li>
+                    <p>2、Stupid is as stupid does.</p>
+                    <span>蠢人做蠢事，也可理解为傻人有傻福。</span>
+                </li>
+                <li>
+                    <p>3、Miracles happen every day.</p>
+                    <span>奇迹每天都在发生。</span>
+                </li>
+                <li>
+                    <p>4、it made me look like a duck in water.</p>
+                    <span>它让我如鱼得水。</span>
+                </li>
+                <li>
+                    <p>5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+                    <span>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</span>
+                </li>
+                <li>
+                    <p>6、Death is just a part of life, something we're all destined to do.</p>
+                    <span>死亡是生命的一部分，是我们注定要做的一件事。</span>
+                </li>
+                <li>
+                    <p>7、You have got to put the past behind you before you can move on.</p>
+                    <span>放下包袱，继续前进。</span>
+                </li>
+                <li>
+                    <p>8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+                    <span>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</span>
+                </li>
+                <li>
+                    <p>9、If there is anything you need, I will not be far away.</p>
+                    <span>只要你需要，我就在这里。</span>
+                </li>
+                <li>
+                    <p>1、Life was like a box of chocolates, you never know what you're going to get.</p>
+                    <span>生命就像一盒巧克力，结果往往出人意料。</span>
+                </li>
+                <li>
+                    <p>2、Stupid is as stupid does.</p>
+                    <span>蠢人做蠢事，也可理解为傻人有傻福。</span>
+                </li>
+                <li>
+                    <p>3、Miracles happen every day.</p>
+                    <span>奇迹每天都在发生。</span>
+                </li>
+                <li>
+                    <p>4、it made me look like a duck in water.</p>
+                    <span>它让我如鱼得水。</span>
+                </li>
+                <li>
+                    <p>5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+                    <span>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</span>
+                </li>
+                <li>
+                    <p>6、Death is just a part of life, something we're all destined to do.</p>
+                    <span>死亡是生命的一部分，是我们注定要做的一件事。</span>
+                </li>
+                <li>
+                    <p>7、You have got to put the past behind you before you can move on.</p>
+                    <span>放下包袱，继续前进。</span>
+                </li>
+                <li>
+                    <p>8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+                    <span>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</span>
+                </li>
+                <li>
+                    <p>9、If there is anything you need, I will not be far away.</p>
+                    <span>只要你需要，我就在这里。</span>
+                </li>
+                <li>
+                    <p>1、Life was like a box of chocolates, you never know what you're going to get.</p>
+                    <span>生命就像一盒巧克力，结果往往出人意料。</span>
+                </li>
+                <li>
+                    <p>2、Stupid is as stupid does.</p>
+                    <span>蠢人做蠢事，也可理解为傻人有傻福。</span>
+                </li>
+                <li>
+                    <p>3、Miracles happen every day.</p>
+                    <span>奇迹每天都在发生。</span>
+                </li>
+                <li>
+                    <p>4、it made me look like a duck in water.</p>
+                    <span>它让我如鱼得水。</span>
+                </li>
+                <li>
+                    <p>5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+                    <span>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</span>
+                </li>
+                <li>
+                    <p>6、Death is just a part of life, something we're all destined to do.</p>
+                    <span>死亡是生命的一部分，是我们注定要做的一件事。</span>
+                </li>
+                <li>
+                    <p>7、You have got to put the past behind you before you can move on.</p>
+                    <span>放下包袱，继续前进。</span>
+                </li>
+                <li>
+                    <p>8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+                    <span>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</span>
+                </li>
+                <li>
+                    <p>9、If there is anything you need, I will not be far away.</p>
+                    <span>只要你需要，我就在这里。</span>
+                </li>
+                <li>
+                    <p>1、Life was like a box of chocolates, you never know what you're going to get.</p>
+                    <span>生命就像一盒巧克力，结果往往出人意料。</span>
+                </li>
+                <li>
+                    <p>2、Stupid is as stupid does.</p>
+                    <span>蠢人做蠢事，也可理解为傻人有傻福。</span>
+                </li>
+                <li>
+                    <p>3、Miracles happen every day.</p>
+                    <span>奇迹每天都在发生。</span>
+                </li>
+                <li>
+                    <p>4、it made me look like a duck in water.</p>
+                    <span>它让我如鱼得水。</span>
+                </li>
+                <li>
+                    <p>5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+                    <span>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</span>
+                </li>
+                <li>
+                    <p>6、Death is just a part of life, something we're all destined to do.</p>
+                    <span>死亡是生命的一部分，是我们注定要做的一件事。</span>
+                </li>
+                <li>
+                    <p>7、You have got to put the past behind you before you can move on.</p>
+                    <span>放下包袱，继续前进。</span>
+                </li>
+                <li>
+                    <p>8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+                    <span>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</span>
+                </li>
+                <li>
+                    <p>9、If there is anything you need, I will not be far away.</p>
+                    <span>只要你需要，我就在这里。</span>
+                </li>
+                <li>
+                    <p>1、Life was like a box of chocolates, you never know what you're going to get.</p>
+                    <span>生命就像一盒巧克力，结果往往出人意料。</span>
+                </li>
+                <li>
+                    <p>2、Stupid is as stupid does.</p>
+                    <span>蠢人做蠢事，也可理解为傻人有傻福。</span>
+                </li>
+                <li>
+                    <p>3、Miracles happen every day.</p>
+                    <span>奇迹每天都在发生。</span>
+                </li>
+                <li>
+                    <p>4、it made me look like a duck in water.</p>
+                    <span>它让我如鱼得水。</span>
+                </li>
+                <li>
+                    <p>5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+                    <span>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</span>
+                </li>
+                <li>
+                    <p>6、Death is just a part of life, something we're all destined to do.</p>
+                    <span>死亡是生命的一部分，是我们注定要做的一件事。</span>
+                </li>
+                <li>
+                    <p>7、You have got to put the past behind you before you can move on.</p>
+                    <span>放下包袱，继续前进。</span>
+                </li>
+                <li>
+                    <p>8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+                    <span>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</span>
+                </li>
+                <li>
+                    <p>9、If there is anything you need, I will not be far away.</p>
+                    <span>只要你需要，我就在这里。</span>
+                </li>
+                <li>
+                    <p>1、Life was like a box of chocolates, you never know what you're going to get.</p>
+                    <span>生命就像一盒巧克力，结果往往出人意料。</span>
+                </li>
+                <li>
+                    <p>2、Stupid is as stupid does.</p>
+                    <span>蠢人做蠢事，也可理解为傻人有傻福。</span>
+                </li>
+                <li>
+                    <p>3、Miracles happen every day.</p>
+                    <span>奇迹每天都在发生。</span>
+                </li>
+                <li>
+                    <p>4、it made me look like a duck in water.</p>
+                    <span>它让我如鱼得水。</span>
+                </li>
+                <li>
+                    <p>5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+                    <span>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</span>
+                </li>
+                <li>
+                    <p>6、Death is just a part of life, something we're all destined to do.</p>
+                    <span>死亡是生命的一部分，是我们注定要做的一件事。</span>
+                </li>
+                <li>
+                    <p>7、You have got to put the past behind you before you can move on.</p>
+                    <span>放下包袱，继续前进。</span>
+                </li>
+                <li>
+                    <p>8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+                    <span>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</span>
+                </li>
+                <li>
+                    <p>9、If there is anything you need, I will not be far away.</p>
+                    <span>只要你需要，我就在这里。</span>
+                </li>
+                <li>
+                    <p>1、Life was like a box of chocolates, you never know what you're going to get.</p>
+                    <span>生命就像一盒巧克力，结果往往出人意料。</span>
+                </li>
+                <li>
+                    <p>2、Stupid is as stupid does.</p>
+                    <span>蠢人做蠢事，也可理解为傻人有傻福。</span>
+                </li>
+                <li>
+                    <p>3、Miracles happen every day.</p>
+                    <span>奇迹每天都在发生。</span>
+                </li>
+                <li>
+                    <p>4、it made me look like a duck in water.</p>
+                    <span>它让我如鱼得水。</span>
+                </li>
+                <li>
+                    <p>5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+                    <span>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</span>
+                </li>
+                <li>
+                    <p>6、Death is just a part of life, something we're all destined to do.</p>
+                    <span>死亡是生命的一部分，是我们注定要做的一件事。</span>
+                </li>
+                <li>
+                    <p>7、You have got to put the past behind you before you can move on.</p>
+                    <span>放下包袱，继续前进。</span>
+                </li>
+                <li>
+                    <p>8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+                    <span>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</span>
+                </li>
+                <li>
+                    <p>9、If there is anything you need, I will not be far away.</p>
+                    <span>只要你需要，我就在这里。</span>
+                </li>
+                <li>
+                    <p>1、Life was like a box of chocolates, you never know what you're going to get.</p>
+                    <span>生命就像一盒巧克力，结果往往出人意料。</span>
+                </li>
+                <li>
+                    <p>2、Stupid is as stupid does.</p>
+                    <span>蠢人做蠢事，也可理解为傻人有傻福。</span>
+                </li>
+                <li>
+                    <p>3、Miracles happen every day.</p>
+                    <span>奇迹每天都在发生。</span>
+                </li>
+                <li>
+                    <p>4、it made me look like a duck in water.</p>
+                    <span>它让我如鱼得水。</span>
+                </li>
+                <li>
+                    <p>5、I don't know if we each have a destiny, or if we're all just floating around accidental—like on a breeze.</p>
+                    <span>我不懂我们是否有着各自的命运，还是只是到处随风飘荡。</span>
+                </li>
+                <li>
+                    <p>6、Death is just a part of life, something we're all destined to do.</p>
+                    <span>死亡是生命的一部分，是我们注定要做的一件事。</span>
+                </li>
+                <li>
+                    <p>7、You have got to put the past behind you before you can move on.</p>
+                    <span>放下包袱，继续前进。</span>
+                </li>
+                <li>
+                    <p>8、It was like just before the sun goes to bed down on the bayou. There was a million sparkles on the river.</p>
+                    <span>就像太阳在落山前映射在河口上，有无数的亮点在闪闪发光。</span>
+                </li>
+                <li>
+                    <p>9、If there is anything you need, I will not be far away.</p>
+                    <span>只要你需要，我就在这里。</span>
+                </li>
+            </ul>
+            <!--滚动棒-->
+            <div class="scroll">
+                <div class="bar"></div>
+            </div>
+        </div>
+        
+        <script>
+            (function () {
+                //节点
+                let oBar=document.querySelector(".scroll .bar"),
+                    oScroll=document.querySelector(".scroll"),
+                    oWrap=document.querySelector("#wrap"),
+                    oContent=document.querySelector("#wrap .content")
+                ;
+                //各种事件的添加
+                (function () {
+                    let downY,
+                        downTop,
+                        contentTop
+                    ;
+                    (function(){
+                        //棒子的长度
+                        let barheight=oScroll.offsetHeight * oWrap.offsetHeight /oContent.offsetHeight;
+                        oBar.style.height=barheight+"px";
+                    })();
+
+                    //极限值判断
+                    let maxtop=oScroll.offsetHeight-oBar.offsetHeight,
+                        mintop=0,
+                        maxcontent=oContent.offsetHeight-oScroll.offsetHeight;
+
+                    //滚动的变化量 滚轮极限值比内容极限值
+                    // let step= (maxtop/maxcontent)*10;
+                    let step= (maxcontent/maxtop)*0.1;
+
+                    //滑轮不存在
+                    (function () {
+                        let bool=oContent.offsetHeight/oScroll.offsetHeight
+                        // if(bool<=1)oScroll.style.display="none";
+                        bool<=1&&(oScroll.style.display="none");
+                    })()
+                    //按下事件
+                    oBar.addEventListener("mousedown",bardown);
+                    //抬起事件
+                    document.addEventListener("mouseup",docup);
+                    //滚动事件
+                    oWrap.addEventListener("mousewheel",barwheel);
+                    //按下函数事件 传值鼠标节点
+                    function bardown(ev) {
+                        //获取棒的定位y
+                        downY=oBar.offsetTop;
+                        //获取当前鼠标定位y
+                        downTop=ev.clientY;
+                        document.addEventListener("mousemove",barMove);
+                    }
+                    //经过函数事件
+                    function barMove(ev) {
+                        //时时获取鼠标变化量
+                        let y=ev.clientY-downTop;
+                        //获取时时定位信息
+                        let Top=y+downY;
+
+                        changtop(Top);
+                    }
+                    //变化
+                    function changtop(Top) {
+                        //极限值
+                        Top=Math.max(Top,mintop);
+                        Top=Math.min(Top,maxtop);
+                        // if(Top<=0){
+                        //     Top=0;
+                        // }
+                        // if(Top>=maxtop){
+                        //     Top=maxtop;
+                        // }
+
+                        //内容区的位置
+                        //考虑1极限值的位置 2比例*变化量
+                        contentTop=maxcontent/maxtop*Top;
+                        //棒子位置确定
+                        oBar.style.top=Top+"px";
+                        //内容区的确定
+                        oContent.style.top=-contentTop+"px";
+                    }
+                    //滚动事件
+                    function barwheel(ev) {
+                        let y= ev.wheelDelta/120;
+
+                        changtop(oBar.offsetTop-y*step);
+                        //取消外面的默认监听
+                        ev.preventDefault();
+                    }
+                    //抬起函数事件 取消经过事件
+                    function docup() {
+                        document.removeEventListener("mousemove",barMove);
+                    }
+                })();
+            })()
+			
+			//难点注意极限取值maxcontent,maxtop. 滚轮传的实数
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                width: 100%;
+                height:530px;
+                padding-top: 50px;
+                background-image: linear-gradient(to bottom,#8cc1dd 0%, #f8a886 100%);
+                user-select: none;
+            }
+            #wrap .container{
+                width: 800px;
+                height: 530px;
+                margin: 0 auto;
+            }
+            #wrap .container .left,
+            #wrap .container .right{
+                float: left;
+                width:50%;
+                height: 100%;
+            }
+            #wrap .container .left{
+                padding-top: 50px;
+                background-color: #fff;
+            }
+            #wrap .container .right{
+                background-color: rgba(0,0,0,0.5);
+            }
+            .left .content{
+                margin-left: 20px;
+            }
+            .left .content p{
+                color: #f9a8a5;
+            }
+            .left .content p span{
+                margin-right:5px ;
+                color:black;
+            }
+            .left .content p span:hover{
+                color:red;
+                cursor: pointer;
+            }
+            .left .produce{
+                padding-top:10px;
+                margin-left: 20px;
+            }
+            .left .produce  span{
+                float: left;
+                padding:5px 7px;
+                margin-right: 15px;
+                margin-top: 10px;
+                border: 1px solid #ccc;
+                color:#99a6c4;
+            }
+            .produce  span i{
+                padding-left: 3px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+            .right .produce{
+                padding-top: 70px;
+                padding-left: 20px;
+            }
+            .right .produce span{
+                float: left;
+                padding: 5px;
+                margin-bottom: 10px;
+                margin-right: 30px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                color:#fff;
+            }
+            .clearfixed::after{
+                content:'';
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="container">
+                <div class="left">
+                    <div class="content">
+                        <p class="title">
+                            热门目的地：
+                            <span>马来西亚</span>
+                            <span>泰国</span>
+                            <span>三亚</span>
+                            <span>新西兰</span>
+                            <span>云南</span>
+                        </p>
+                    </div>
+                    <div class="produce clearfixed">
+                        <!--<span>马来西亚 |<i>X</i></span>-->
+                        <!--<span>马来 |<i>X</i></span>-->
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="produce clearfixed">
+                         <!--<span>马来西亚</span>-->
+                         <!--<span>马来</span>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            (function () {
+                let aSpan=[...document.querySelectorAll("#wrap .container .left .content p span")],
+                    oLeftProduce=document.querySelector(".left .produce "),
+                    oRightProduce=document.querySelector(".right .produce");
+
+                let bool=[];//判断是否已经有内容 开始为un 判断为假
+                //点击事件
+                aSpan.forEach((ele,index)=>{
+                    ele.onclick=function () {
+
+                        if(!bool[index])bool[index]={};
+                        if(bool[index].bool)return;//内容存在 为真跳出
+
+                        create(index);
+                        //注意改变是数组里的真假判断
+                        bool[index].bool=true;
+                    }
+                })
+                function  create(index) {
+                    let data=bool[index];
+
+                    if(!data.oSpanLeft){
+                        //生产左边内容区域
+                        data.oSpanLeft=document.createElement("span");
+                        let html=aSpan[index].innerHTML;
+                        let textLeft=document.createTextNode(html+"|");
+                        let oI=document.createElement("i");
+                        oI.innerHTML="X";
+                        //从第2个标签放起
+                        data.oSpanLeft.appendChild(textLeft);
+                        data.oSpanLeft.appendChild(oI);
+                        //删除事件 产生了闭包 内部作用域使用外部作用的变量
+                        oI.onclick=function () {
+                            //删掉左边span
+                            oLeftProduce.removeChild(data.oSpanLeft);
+                            //删掉右边span
+                            oRightProduce.removeChild(data.oSpanRight);
+                            bool[index].bool=false;
+                        }
+                        //生产右边内容区域
+                        data.oSpanRight=document.createElement("span");
+                        let textRight=document.createTextNode(html);
+                        data.oSpanRight.appendChild(textRight);
+                    }
+                    //最后再放第一个
+                    oLeftProduce.appendChild(data.oSpanLeft);
+                    //放内容到右边位置
+                    oRightProduce.appendChild(data.oSpanRight);
+               }
+            })();
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

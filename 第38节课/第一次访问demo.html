@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;user-select:none;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+
+        </div>
+        <script>
+            let Cookie={
+                set(object,data){
+                    let time=new Date(new Date().getTime()+(24*60*60*1000)*data).toUTCString();
+                    Object.entries(object).forEach(([key,value])=>{
+                        document.cookie=`${key}=${value};expires=${time}`;
+                    })
+                },
+                get(key){
+                    if(key){
+                        new RegExp("(^|\\s)"+key+"=([^;]*)(;|$)").test(document.cookie);
+                        return RegExp.$2;
+                    }else{
+                        return  document.cookie;
+                    }
+                },
+                remove(key){
+                    Cookie.set({[key]:""},-1)
+                }
+            };
+            (function () {
+               //获取节点
+               let oWrap=document.querySelector("#wrap");
+               //设置变量获取上一个访问时间
+               let Lasttime=Cookie.get("Lasttime");
+               //变量存储当前时间----毫秒
+               let data= new Date().getTime();
+               function shorttime(Lasttime){
+                   //上次时间参数-----毫秒---文字
+                   let data=new Date(Lasttime-0);
+                   if(Lasttime){
+                        return `上次访问的时间是:${data.getFullYear()}-${data.getMonth()+1}-${data.getDate()},${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`;
+                   }else {
+                        return`欢迎第一次访问`;
+                   }
+               }
+               //网页的内容
+               oWrap.innerHTML=shorttime(Lasttime);
+               //cook设置访问时间
+               Cookie.set({Lasttime:data},7);
+            })()
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

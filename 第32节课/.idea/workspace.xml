@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="270796cf-9180-4d14-93a9-3b23897b2549" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-518222336">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="132" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.15" value="5" />
+          <entry key="project.open.time.16" value="3" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.171" value="1" />
+          <entry key="project.open.time.18" value="7" />
+          <entry key="project.open.time.19" value="17" />
+          <entry key="project.open.time.20" value="13" />
+          <entry key="project.open.time.21" value="12" />
+          <entry key="project.open.time.22" value="14" />
+          <entry key="project.open.time.23" value="10" />
+          <entry key="project.open.time.24" value="8" />
+          <entry key="project.open.time.25" value="7" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.27" value="5" />
+          <entry key="project.open.time.28" value="5" />
+          <entry key="project.open.time.29" value="5" />
+          <entry key="project.open.time.30" value="2" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.33" value="3" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.opened" value="133" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="249" />
+          <entry key="jpg" value="17" />
+          <entry key="js" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="249" />
+          <entry key="Image" value="17" />
+          <entry key="JavaScript" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="71188" />
+          <entry key="js" value="1241" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="71188" />
+          <entry key="JavaScript" value="1241" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+    <session id="-1611544278">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="1157" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="1157" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+              <folding>
+                <element signature="e#1072#1104#0" />
+                <element signature="e#1807#1847#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>l</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/第十三节课的作业/demo嵌套切换.html" />
+        <option value="$PROJECT_DIR$/../file/01-作业-双层选项卡.html" />
+        <option value="$PROJECT_DIR$/第十三节课/demo嵌套切换.html" />
+        <option value="$PROJECT_DIR$/第十三节课/demo2嵌套切换.html" />
+        <option value="$PROJECT_DIR$/14/1.html" />
+        <option value="$PROJECT_DIR$/第八节课/demo3乘法表.html" />
+        <option value="$PROJECT_DIR$/第十八节课.html" />
+        <option value="$PROJECT_DIR$/demo1级下拉单.html" />
+        <option value="$PROJECT_DIR$/第十八节课/demo2问题.html" />
+        <option value="$PROJECT_DIR$/第十八节课/demo4海报.html" />
+        <option value="$PROJECT_DIR$/第十八节课/demo2全选.html" />
+        <option value="$PROJECT_DIR$/第十八节课/demo3天猫.html" />
+        <option value="$PROJECT_DIR$/练习/123.html" />
+        <option value="$PROJECT_DIR$/第十八节课修改后/demo2全选.html" />
+        <option value="$PROJECT_DIR$/第十八节课修改后/demo1全选.html" />
+        <option value="$PROJECT_DIR$/第十八节课修改后/demo2天猫.html" />
+        <option value="$PROJECT_DIR$/第二十二节课.html" />
+        <option value="$PROJECT_DIR$/第二十二节课/demo.数据的修改.html" />
+        <option value="$PROJECT_DIR$/第二十三节课/demo1.封装取整.html" />
+        <option value="$PROJECT_DIR$/第二十三节课/黑心摇号.html" />
+        <option value="$PROJECT_DIR$/../file/03-作业-中奖概率.html" />
+        <option value="$PROJECT_DIR$/第二十三节课/黑心摇号修改后.html" />
+        <option value="$PROJECT_DIR$/../file/01-作业-查找与替换.html" />
+        <option value="$PROJECT_DIR$/第二十二节课/demo.数据的查询修改重置补交的作业.html" />
+        <option value="$PROJECT_DIR$/第十八节课修改后/demo3海报.html" />
+        <option value="$PROJECT_DIR$/第26节课/demo无缝切换.html" />
+        <option value="$PROJECT_DIR$/第26节课/demo无缝切换2.html" />
+        <option value="$PROJECT_DIR$/第26节课/demo无缝切换3.html" />
+        <option value="$PROJECT_DIR$/第27节课/逐步运动框架.html" />
+        <option value="$PROJECT_DIR$/第27节课/move.js" />
+        <option value="$PROJECT_DIR$/第30节课/自动生成rgb.html" />
+        <option value="$PROJECT_DIR$/第30节课/圆心运动.html" />
+        <option value="$PROJECT_DIR$/第30节课/demo随机排列.html" />
+        <option value="$PROJECT_DIR$/../file/04-圆周运动-js.html" />
+        <option value="$PROJECT_DIR$/../file/01-作业-滚动时钟.html" />
+        <option value="$PROJECT_DIR$/第30节课/圆心运动2.html" />
+        <option value="$PROJECT_DIR$/第30节课/demo.时间更换.html" />
+        <option value="$PROJECT_DIR$/第32节课/节点操作.html" />
+        <option value="$PROJECT_DIR$/第32节课/节点操作2demo.html" />
+        <option value="$PROJECT_DIR$/第35节课/盒子拖拽demo.html" />
+        <option value="$PROJECT_DIR$/第35节课/盒子宽高拖拽demo.html" />
+        <option value="$PROJECT_DIR$/../file1/file/02-案例-碰撞小球.html" />
+        <option value="$PROJECT_DIR$/第35节课/碰撞小球demo.html" />
+        <option value="$PROJECT_DIR$/第35节课/碰撞变色小球.html" />
+        <option value="$PROJECT_DIR$/第5节课/demo提交信息.html" />
+        <option value="$PROJECT_DIR$/练习/demo.html" />
+        <option value="$PROJECT_DIR$/其他/demo.html" />
+        <option value="$PROJECT_DIR$/1/demo.html" />
+        <option value="$PROJECT_DIR$/1/daw.html" />
+        <option value="$PROJECT_DIR$/1/4124.html" />
+        <option value="$PROJECT_DIR$/demo.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="244" />
+    <option name="y" value="124" />
+    <option name="width" value="1021" />
+    <option name="height" value="647" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="练习" type="b2602c69:ProjectViewProjectNode" />
+              <item name="练习" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="=&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\48期javascript\第30节课" />
+      <recent name="D:\48期javascript\第26节课" />
+      <recent name="D:\48期javascript\练习" />
+      <recent name="D:\48期javascript\练习\img" />
+      <recent name="D:\48期javascript\第8节课" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\练习" />
+      <recent name="C:\Users\admin\Desktop\练习\1" />
+      <recent name="D:\48期javascript\其他" />
+      <recent name="D:\48期javascript\第十八节课" />
+      <recent name="D:\48期javascript\js样式" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="270796cf-9180-4d14-93a9-3b23897b2549" name="Default Changelist" comment="" />
+      <created>1536276138389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536276138389</updated>
+      <workItem from="1536276148359" duration="404000" />
+      <workItem from="1536276609283" duration="1622000" />
+      <workItem from="1536306087293" duration="3988000" />
+      <workItem from="1536314406449" duration="1425000" />
+      <workItem from="1536363962229" duration="3331000" />
+      <workItem from="1536372822607" duration="1942000" />
+      <workItem from="1536374848068" duration="49000" />
+      <workItem from="1536408865341" duration="91000" />
+      <workItem from="1536409074643" duration="491000" />
+      <workItem from="1536491682790" duration="599000" />
+      <workItem from="1536729840343" duration="4863000" />
+      <workItem from="1536750729706" duration="3192000" />
+      <workItem from="1536890186582" duration="2984000" />
+      <workItem from="1537013081950" duration="12150000" />
+      <workItem from="1537055049550" duration="5643000" />
+      <workItem from="1537094322570" duration="6928000" />
+      <workItem from="1537103021423" duration="4006000" />
+      <workItem from="1537140585495" duration="3942000" />
+      <workItem from="1537150283128" duration="5269000" />
+      <workItem from="1537169808818" duration="438000" />
+      <workItem from="1537189972509" duration="8837000" />
+      <workItem from="1537394462983" duration="5457000" />
+      <workItem from="1537417443828" duration="1813000" />
+      <workItem from="1537431033832" duration="5795000" />
+      <workItem from="1537441021813" duration="447000" />
+      <workItem from="1537441741931" duration="8281000" />
+      <workItem from="1537485449042" duration="742000" />
+      <workItem from="1537521161700" duration="5293000" />
+      <workItem from="1537600163204" duration="3393000" />
+      <workItem from="1537701263341" duration="8783000" />
+      <workItem from="1537745429267" duration="23460000" />
+      <workItem from="1537770787347" duration="3075000" />
+      <workItem from="1537786091676" duration="8111000" />
+      <workItem from="1537861954991" duration="508000" />
+      <workItem from="1537961152987" duration="13442000" />
+      <workItem from="1538022932987" duration="4058000" />
+      <workItem from="1538027065368" duration="828000" />
+      <workItem from="1538037590907" duration="14902000" />
+      <workItem from="1538088061233" duration="4159000" />
+      <workItem from="1538106361746" duration="6889000" />
+      <workItem from="1538120956678" duration="2530000" />
+      <workItem from="1538188885102" duration="4626000" />
+      <workItem from="1538213828919" duration="956000" />
+      <workItem from="1538273128561" duration="13715000" />
+      <workItem from="1538303082167" duration="403000" />
+      <workItem from="1538358584084" duration="12986000" />
+      <workItem from="1538376751517" duration="7757000" />
+      <workItem from="1538384624271" duration="612000" />
+      <workItem from="1538389029369" duration="1732000" />
+      <workItem from="1538403352280" duration="168000" />
+      <workItem from="1538405402942" duration="4232000" />
+      <workItem from="1538434564980" duration="20813000" />
+      <workItem from="1538464963898" duration="6101000" />
+      <workItem from="1538477079960" duration="4443000" />
+      <workItem from="1538481706327" duration="92000" />
+      <workItem from="1538483057532" duration="706000" />
+      <workItem from="1538533575076" duration="259000" />
+      <workItem from="1538536671830" duration="140000" />
+      <workItem from="1538537016254" duration="3132000" />
+      <workItem from="1538540549680" duration="1812000" />
+      <workItem from="1538631187863" duration="842000" />
+      <workItem from="1538726066939" duration="4281000" />
+      <workItem from="1538730461820" duration="27000" />
+      <workItem from="1538731455765" duration="983000" />
+      <workItem from="1538733974708" duration="1563000" />
+      <workItem from="1538735594569" duration="969000" />
+      <workItem from="1538740285580" duration="320000" />
+      <workItem from="1538740884087" duration="717000" />
+      <workItem from="1538792017938" duration="219000" />
+      <workItem from="1538792416600" duration="188000" />
+      <workItem from="1538792664980" duration="647000" />
+      <workItem from="1538793809408" duration="184000" />
+      <workItem from="1538829104624" duration="368000" />
+      <workItem from="1538829945044" duration="218000" />
+      <workItem from="1538830265030" duration="12000" />
+      <workItem from="1538915699538" duration="90000" />
+      <workItem from="1539036466186" duration="5470000" />
+      <workItem from="1539068762765" duration="46000" />
+      <workItem from="1539083600503" duration="11283000" />
+      <workItem from="1539164327035" duration="17815000" />
+      <workItem from="1539232788490" duration="8201000" />
+      <workItem from="1539241289965" duration="99000" />
+      <workItem from="1539241906950" duration="367000" />
+      <workItem from="1539413547277" duration="2414000" />
+      <workItem from="1539425409357" duration="1685000" />
+      <workItem from="1539480914461" duration="5346000" />
+      <workItem from="1539491814824" duration="12472000" />
+      <workItem from="1539504875901" duration="552000" />
+      <workItem from="1539643239991" duration="348000" />
+      <workItem from="1539643958886" duration="1690000" />
+      <workItem from="1539647175766" duration="2756000" />
+      <workItem from="1539672644578" duration="6105000" />
+      <workItem from="1539692390434" duration="364000" />
+      <workItem from="1539733785709" duration="4301000" />
+      <workItem from="1539750640166" duration="4822000" />
+      <workItem from="1539771012123" duration="8295000" />
+      <workItem from="1539788074342" duration="3629000" />
+      <workItem from="1539850281535" duration="3925000" />
+      <workItem from="1539906245487" duration="11100000" />
+      <workItem from="1540095751724" duration="9740000" />
+      <workItem from="1540105910584" duration="593000" />
+      <workItem from="1540164022408" duration="1099000" />
+      <workItem from="1540219176706" duration="2238000" />
+      <workItem from="1540249267131" duration="2031000" />
+      <workItem from="1540252129892" duration="1485000" />
+      <workItem from="1540278609750" duration="4027000" />
+      <workItem from="1540294366648" duration="3129000" />
+      <workItem from="1540298759147" duration="11593000" />
+      <workItem from="1540463420856" duration="558000" />
+      <workItem from="1540464407806" duration="514000" />
+      <workItem from="1540466633964" duration="23000" />
+      <workItem from="1540545324789" duration="18315000" />
+      <workItem from="1540637340389" duration="4195000" />
+      <workItem from="1540682616025" duration="17124000" />
+      <workItem from="1540700125859" duration="598000" />
+      <workItem from="1540701375446" duration="1019000" />
+      <workItem from="1540702866613" duration="60000" />
+      <workItem from="1540706745140" duration="8016000" />
+      <workItem from="1540731598084" duration="8229000" />
+      <workItem from="1540740452147" duration="1408000" />
+      <workItem from="1540742048114" duration="237000" />
+      <workItem from="1540772243387" duration="7619000" />
+      <workItem from="1540779956972" duration="7265000" />
+      <workItem from="1540787919870" duration="7502000" />
+      <workItem from="1540804562865" duration="449000" />
+      <workItem from="1540805422842" duration="969000" />
+      <workItem from="1540806847626" duration="4964000" />
+      <workItem from="1540817776722" duration="246000" />
+      <workItem from="1540818253860" duration="850000" />
+      <workItem from="1540819482054" duration="180000" />
+      <workItem from="1540819841104" duration="2079000" />
+      <workItem from="1540823089236" duration="100000" />
+      <workItem from="1540865717934" duration="197000" />
+      <workItem from="1540865926741" duration="69000" />
+      <workItem from="1540866006836" duration="461000" />
+      <workItem from="1540866478859" duration="4443000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="537182000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="244" y="124" width="1021" height="647" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25074184" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33442622" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32911393" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24963397" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17642753" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24963397" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/第二十二节课/demo.数据的修改.html" />
+    <entry file="file://$PROJECT_DIR$/第二十二节课/demo.数据的查询修改重置补交的作业.html" />
+    <entry file="file://$PROJECT_DIR$/../file/01-作业-查找与替换.html" />
+    <entry file="file://$PROJECT_DIR$/第十八节课/demo4海报.html" />
+    <entry file="file://$PROJECT_DIR$/第十八节课修改后/demo3海报.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/3.jpg" />
+    <entry file="file://$PROJECT_DIR$/第13节课/demo嵌套切换.html" />
+    <entry file="file://$PROJECT_DIR$/第11节课/demo选项卡.html" />
+    <entry file="file://$PROJECT_DIR$/../file/08-案例-带左右按钮的选项卡.html" />
+    <entry file="file://$PROJECT_DIR$/第26节课/img/1.jpg" />
+    <entry file="file://$PROJECT_DIR$/第26节课/img/4.jpg" />
+    <entry file="file://$PROJECT_DIR$/第26节课/img/3.jpg" />
+    <entry file="file://$PROJECT_DIR$/第26节课/img/2.jpg" />
+    <entry file="file://$PROJECT_DIR$/第26节课/demo无缝切换2.html" />
+    <entry file="file://$PROJECT_DIR$/第26节课/demo无缝切换.html" />
+    <entry file="file://$PROJECT_DIR$/../file/01-作业-无缝轮播.html" />
+    <entry file="file://$PROJECT_DIR$/第26节课/demo无缝切换3.html" />
+    <entry file="file://$PROJECT_DIR$/../动画/02-运动框架.html" />
+    <entry file="file://$PROJECT_DIR$/../动画/01-运动.html" />
+    <entry file="file://$PROJECT_DIR$/../动画/move.js" />
+    <entry file="file://$PROJECT_DIR$/../file/01-案例-商品按照价格排序.html" />
+    <entry file="file://$PROJECT_DIR$/../file/04-圆周运动-js.html" />
+    <entry file="file://$PROJECT_DIR$/第30节课/demo随机排列.html" />
+    <entry file="file://$PROJECT_DIR$/../file/01-作业-滚动时钟.html" />
+    <entry file="file://$PROJECT_DIR$/../js/上课的代码/28案例/03-圆周运动-css3.html" />
+    <entry file="file://$PROJECT_DIR$/第30节课/圆心运动.html" />
+    <entry file="file://$PROJECT_DIR$/../js/上课的代码/28案例/04-圆周运动-js.html" />
+    <entry file="file://$PROJECT_DIR$/第30节课/圆心运动2.html" />
+    <entry file="file://$PROJECT_DIR$/第32节课/节点操作2demo.html" />
+    <entry file="file://$PROJECT_DIR$/../js/上课的代码/31盒子拖拽/11-可拖拽的盒子.html" />
+    <entry file="file://$PROJECT_DIR$/../file1/file/01-作业-改变盒子大小.html" />
+    <entry file="file://$PROJECT_DIR$/第35节课/盒子拖拽demo.html" />
+    <entry file="file://$PROJECT_DIR$/第35节课/盒子宽高拖拽demo.html" />
+    <entry file="file://$PROJECT_DIR$/../file1/file/02-案例-碰撞小球.html" />
+    <entry file="file://$PROJECT_DIR$/第32节课/节点操作.html" />
+    <entry file="file://$PROJECT_DIR$/第30节课/自动生成rgb.html" />
+    <entry file="file://$PROJECT_DIR$/第27节课/逐步运动框架.html" />
+    <entry file="file://$PROJECT_DIR$/第27节课/move.js" />
+    <entry file="file://$PROJECT_DIR$/第30节课/demo.时间更换.html" />
+    <entry file="file://$PROJECT_DIR$/../碰撞的小球作业.html" />
+    <entry file="file://$PROJECT_DIR$/../多颗球发射.html" />
+    <entry file="file://$PROJECT_DIR$/第2节课/demo.html" />
+    <entry file="file://$PROJECT_DIR$/第3节课/demo提交信息.html" />
+    <entry file="file://$PROJECT_DIR$/第35节课/碰撞小球demo.html" />
+    <entry file="file://$PROJECT_DIR$/第35节课/碰撞变色小球.html" />
+    <entry file="file://$PROJECT_DIR$/第5节课/demo提交信息.html" />
+    <entry file="file://$PROJECT_DIR$/其他/demo.html" />
+    <entry file="file://$PROJECT_DIR$/1/demo.html" />
+    <entry file="file://$PROJECT_DIR$/1/daw.html" />
+    <entry file="file://$PROJECT_DIR$/1/4124.html" />
+    <entry file="file://$PROJECT_DIR$/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="e#1072#1104#0" />
+            <element signature="e#1807#1847#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .container{
+                width:200px;
+                margin:50px auto 0;
+                background-color: lightgreen;
+                border: 1px solid black;
+                user-select: none;
+            }
+            .container .drop{
+                width: 100%;
+                height: 33%;
+                border-bottom: 1px dotted royalblue;
+            }
+            .container .drop p{
+                width: 100%;
+                height: 33%;
+                color:red;
+                font-size:16px;
+                font-weight: bold;
+                text-indent: 15px;
+                line-height: 33px;
+                opacity:0.8;
+                cursor: pointer;
+            }
+            .drop .list{
+                display: none;
+                width:100%;
+                background-color: #993300;
+            }
+            .drop .list.show{
+                display: block;
+            }
+            .drop .list li{
+                height:30px;
+                border-bottom: 1px dotted khaki;
+                color:lightpink;
+                font-size:16px;
+                text-indent: 40px;
+                line-height: 30px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="drop">
+                <p>同学</p>
+                <ul class="list">
+                    <li>涛涛</li>
+                    <li>凯凯</li>
+                    <li>东东</li>
+                    <li>虎虎</li>
+                </ul>
+            </div>
+            <div class="drop">
+                <p>家人</p>
+                <ul class="list">
+                    <li>奶奶</li>
+                    <li>爷爷</li>
+                    <li>爸爸</li>
+                    <li>妈妈</li>
+                </ul>
+            </div>
+            <div class="drop">
+                <p>兴趣</p>
+                <ul class="list">
+                    <li>打代码</li>
+                    <li>听音乐</li>
+                    <li>看小说</li>
+                    <li>玩手游</li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            let aDrop=document.querySelectorAll(".container .drop "),
+                aList=document.querySelectorAll(".drop .list"),
+
+                len=aDrop.length,
+                bool=[1,1,1];//用个变量记入当前的状态
+            for(let i=0;i<len;i++){
+                aDrop[i].onclick=function(){
+                    // if(bool[i]){
+                    //     aList[i].classList.add("show");
+                    //     bool[i]=0;
+                    // }else{
+                    //     aList[i].classList.remove("show");
+                    //     bool[i]=1;
+                    // }
+
+                    // bool[i] ? (aList[i].classList["add"]("show"),bool[i]=0)
+                    //     : (aList[i].classList["remove"]("show"),bool[i]=1);
+
+                    // aList[i].classList.contains("show") ?
+                    //      aList[i].classList.remove("show"):
+                    //      aList[i].classList.add("show");
+                    aList[i].classList.toggle("show");
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .banner{
+                width:467px;
+                height:220px;
+                padding-left:33px;
+                margin: 50px auto 0;
+                user-select: none;
+            }
+            .banner .left{
+                float: left;
+                width:100px;
+                height:93px;
+            }
+            .banner .left ul{
+                margin-right: 3px;
+            }
+            .banner .left ul li{
+                height:30px;
+                margin-bottom: 2px;
+                background-color: #121112;
+                color:white;
+                font-size:12px;
+                text-align:center;
+                line-height: 30px;
+                cursor:pointer;
+            }
+            .banner .left ul li.show{
+                background-color: #f60;
+            }
+            .clearfixed:after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .banner .right{
+                position: relative;
+                float: left;
+                width:326px;
+                height:204px;
+            }
+            .right .content{
+                display: none;
+                position: absolute;
+                width: 100%;
+                height:100%;
+            }
+            .right .content.show{
+                display: block;
+
+            }
+            .right .content .img li{
+                display: none;
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height:100%;
+            }
+            .right .content .img li.show{
+                display: block;
+            }
+            .right .btn{
+                position: absolute;
+                z-index: 1;
+                top:85%;
+                width:176px;
+                height: 27px;
+            }
+            .right .btn li{
+                float: left;
+                width:27px;
+                height: 27px;
+                margin-left:8px;
+                background-color: black;
+                color:white;
+                text-align: center;
+                line-height: 27px;
+                cursor: pointer;
+            }
+            .right .btn li.show{
+                background-color: #f60;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="banner clearfixed">
+            <div class="left">
+                <ul>
+                    <li class="show">豪车</li>
+                    <li>美味</li>
+                    <li>美女风景</li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="content show">
+                    <ul class="img">
+                        <li class="show"><img src="img/1.jpg" height="204" width="326"/></li>
+                        <li><img src="img/2.jpg" height="204" width="326"/></li>
+                        <li><img src="img/3.jpg" height="204" width="326"/></li>
+                        <li><img src="img/4.jpg" height="204" width="326"/></li>
+                    </ul>
+                    <ul class="btn clearfixed">
+                        <li class="show">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul class="img ">
+                        <li class="show"><img src="img/m1.jpg" height="204" width="326"/></li>
+                        <li><img src="img/m2.jpg" height="204" width="326"/></li>
+                        <li><img src="img/m3.jpg" height="204" width="326"/></li>
+                        <li><img src="img/m4.jpg" height="204" width="326"/></li>
+                        <li><img src="img/m5.jpg" height="204" width="326"/></li>
+                    </ul>
+                    <ul class="btn clearfixed">
+                        <li class="show">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul class="img">
+                        <li class="show"><img src="img/s1.jpg" height="204" width="326"/></li>
+                        <li><img src="img/s2.jpg" height="204" width="326"/></li>
+                        <li><img src="img/s3.jpg" height="204" width="326"/></li>
+                        <li><img src="img/s4.jpg" height="204" width="326"/></li>
+                        <li><img src="img/s5.jpg" height="204" width="326"/></li>
+                    </ul>
+                    <ul class="btn clearfixed">
+                        <li class="show">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            //设置变量
+            let aLeftli=document.querySelectorAll(".left ul li"),
+                aContent=document.querySelectorAll(".right .content"),
+                aBtn=document.querySelectorAll(".right .btn"),
+                aImg=document.querySelectorAll(".right .content .img");
+
+            let len=aLeftli.length,//左边li的层数
+                leftindex=0;//初始左边按钮的位置
+            (function(){
+                function left(i){
+                    aLeftli[i].onclick=function () {//经过事件
+                        if(leftindex===i)return;
+                        aLeftli[leftindex].className=""; //样式左边清空
+                        aContent[leftindex].className="content";//样式右边清空
+                        aContent[i].className="content show";//经过显示左边样式
+                        aLeftli[i].className="show";//经过显示右边样式
+                        leftindex=i;
+                    }
+                }
+                function right(i){
+                    let aBtnli=aBtn[i].querySelectorAll("li"),//左边每个按钮对应的右边的图片集合
+                        aImgLi = aImg[i].querySelectorAll("li");//左边每个按钮对应的右边按钮的集合
+
+                    let len1=aBtnli.length,
+                        rightindex=0;
+
+                    for(let j=0;j<len1;j++){//设置右边底下的按钮个数
+                        aBtnli[j].onclick=function (){
+                            if(rightindex===j)return;
+                            aBtnli[rightindex].className="";//样式清空
+                            aImgLi[rightindex].className="";
+                            rightindex=j;//点击第i个按钮值赋值给初始值
+                            aBtnli[rightindex].className="show";//添加样式
+                            aImgLi[rightindex].className="show";
+                        }
+                    }
+                }
+                for(let i=0;i<len;i++){//设置左边3个按钮
+                    left(i);//左边事件
+                    right(i);//右边事件
+                }
+            })()
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

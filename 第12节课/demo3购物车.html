@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+
+            .shop{
+                width:1000px;
+                height:520px;
+                margin:50px auto 0;
+                user-select: none;
+            }
+            table{
+                width:1000px;
+
+                border-collapse: collapse;
+                text-align: center;
+            }
+            table .title{
+                width:1000px;
+                height:50px;
+                background-color:#c36;
+                color:white;
+                font-weight: bold;
+            }
+            table .title td{
+                width:250px;
+                height:50px;
+            }
+            table tr{
+                height:100px;
+            }
+            table tr td{
+                border:1px solid #930;
+            }
+            table .add,table .minus{
+                float:left;
+                width:30px;
+                height:30px;
+                background-color:#ddd;
+                line-height: 30px;
+            }
+            table .minus{
+                margin-left:70px;
+            }
+            table .num{
+                float:left;
+                width:50px;
+                height:28px;
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                color:#c36;
+                font-size:12px;
+                line-height: 30px;
+            }
+            table tr td img{
+                width:100px;
+                height:70px;
+            }
+            .box {
+                width:500px;
+                height: 50px;
+                padding-left:500px;
+                margin-top: 10px;
+                background-color: #c36;
+                color:white;
+                font-size:14px;
+                text-align: center;
+                line-height: 50px;
+            }
+            .box p{
+                float: left;
+                height:50px;
+                width:150px;
+                margin-right: 100px;
+            }
+            .box p span{
+                font-size:16px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="shop">
+            <table>
+                <tr class="title">
+                    <td>商品</td>
+                    <td>价格</td>
+                    <td>数量</td>
+                    <td>小计</td>
+                </tr>
+                <tr>
+                    <td><img src="img/shop1.jpg" height="220" width="220"/></td>
+                    <td class="price">8</td>
+                    <td>
+                        <span class="minus">-</span>
+                        <span class="num">0</span>
+                        <span class="add">+</span>
+                    </td>
+                    <td class="subtotal"></td>
+                </tr>
+                <tr>
+                    <td><img src="img/shop2.jpg" height="147" width="220"/></td>
+                    <td class="price">10</td>
+                    <td>
+                        <span class="minus">-</span>
+                        <span class="num">0</span>
+                        <span class="add">+</span>
+                    </td>
+                    <td class="subtotal"></td>
+                </tr>
+                <tr>
+                    <td><img src="img/shop3.jpg" height="165" width="220"/></td>
+                    <td class="price">12.5</td>
+                    <td>
+                        <span class="minus">-</span>
+                        <span class="num">0</span>
+                        <span class="add">+</span>
+                    </td>
+                    <td class="subtotal"></td>
+                </tr>
+                <tr>
+                    <td><img src="img/shop4.jpg" height="220" width="220"/></td>
+                    <td class="price">23</td>
+                    <td>
+                        <span class="minus">-</span>
+                        <span class="num">0</span>
+                        <span class="add">+</span>
+                    </td>
+                    <td class="subtotal"></td>
+                </tr>
+            </table>
+            <div class="box">
+                <p>已选中商品：<span>0</span>个</p>
+                <p>合计费用：<span>0</span>￥</p>
+            </div>
+        </div>
+        
+        <script>
+            //后台传的值
+            let date=[
+                {
+                    id:0,
+                    price:8,
+                    num:0,
+                },
+                {
+                    id:1,
+                    price:10,
+                    num:0,
+                },
+                {
+                    id:2,
+                    price:12.5,
+                    num:0,
+                },
+                {
+                    id:3,
+                    price:23,
+                    num:0,
+                },
+            ]
+            //设置变量
+            let aAdd=document.querySelectorAll(".shop table .add"),
+                aMinus=document.querySelectorAll(".shop table .minus"),
+                aNum=document.querySelectorAll(".shop table .num"),
+                aSubtotal=document.querySelectorAll(".shop table .subtotal"),
+                oSum=document.querySelectorAll(".box p span"),
+                oMoney=document.querySelectorAll(".box p span");
+
+            let len=aAdd.length;
+            (function(){
+                for(let i=0;i<len;i++){
+
+                    function change(i){
+                        //后台数据赋值给页面
+                        aNum[i].innerHTML=date[i].num;
+                        //页面小计值=数量*价格
+                        aSubtotal[i].innerHTML=date[i].num * date[i].price;
+
+                        //4个数据累加
+                        let sum=0,money=0;//已选中商品，总计
+                        for(let i=0;i<len;i++){
+                            sum +=date[i].num;
+                            money +=date[i].num * date[i].price;
+                        }
+                        oSum[0].innerHTML=sum+'';//传给页面商品
+                        oMoney[1].innerHTML=money+'';//传给页面总计
+                    }
+
+                    //4个添加点击事件
+                    aAdd[i].onclick=function () {
+                        //点击数量+1
+                        date[i].num++;
+                        change(i);
+                    }
+
+                   //4个减少点击事件
+                    aMinus[i].onclick=function () {
+                        //点击数量-1
+                        date[i].num--;
+                        if(date[i].num<0){date[i].num=0};
+                        change(i);
+                    }
+                }
+            })()
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

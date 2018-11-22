@@ -1,0 +1,1029 @@
+<!doctype html><!--声明文档类型  -->
+<html lang="en"><!--网页根标签 lang= “语言类型” -->
+ <head><!-- 网页头部.不可视化区域 -->
+  <meta charset="UTF-8"><!--编码格式  ) gbk（简体） gb2312（繁体）-->
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content=""><!-- 作者 -->
+  <meta name="Keywords" content=""><!-- 关键字及词 -->
+  <meta name="Description" content=""><!--网站描述，简介  -->
+  <title>document</title><!-- 标题 -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+  <style type="text/css">
+	body,ul,ol,li,dl,dt,dd,h2,h3,h4,p,th,td,input{margin:0;padding:0;font-family:"雅黑";font-weight:550;}
+	li{list-style:none;}
+	a{text-decoration:none;}
+	.clearfix:after{
+		content:'';
+		display:block;
+		clear:both;
+	}
+	#wrap{
+		width:800px;
+		margin:20px auto 0;
+		border:1px solid #000;
+	}
+	.headr .titl{
+		text-align:center;
+	}
+	.list{
+		width:90%;
+		margin:25px 0 10px 10%;
+	}
+	.list li{
+		float:left;
+		width:50%;
+		margin:0 0 5px 0;
+		text-align:right;
+		font-size:14px;
+	}
+	.list li p{
+		position:relative;
+		display:inline-block;
+		width:34%;
+	}
+	.list li .in{
+		width:210px;
+		border-bottom:1px solid #000;
+	}
+	/* .list li p::after{
+		content:"";
+		position:absolute;
+		bottom:0;
+		width: 210px;
+		border-bottom: 1px solid #000;
+	} */
+	.content{
+		padding:0 0 8px 3px;
+		/* border-bottom:1px solid #000; */
+		background-color:#daeef3;
+	}
+	.content p:nth-child(1){
+		text-decoration:underline;
+	}
+	.content p{
+		font-size:12px;
+		line-height:17px;
+	}
+	h3{
+		padding:0 0 0 3px;
+		background-color:#008000;
+		font-size:12px;
+		color:#fff;
+		line-height:38px;
+	}
+	.tfloot div{
+		padding:5px 3px;
+	}
+	.tfloot dl{
+		font-size:12px;
+	}
+	.tfloot dl dd{
+		text-indent:1em;
+	}
+	.bodyr div ul li{
+		float:left;	
+		width:199px;
+		height:38px;
+		line-height:38px;
+		border-right:1px solid #000;
+		border-bottom:1px solid #000;
+		font-size:12px;
+		text-align:center;
+	}
+	.bodyr span{
+		color:red;
+	}
+	.bodyr div ul li div{
+		line-height:18px;
+	} 
+	.flootr dl{
+		padding-left:3px ;
+		font-size:12px;
+		border-top:1px solid #000;
+	}
+	.flootr h3{
+		line-height:32px;
+	}
+	.flootr h4{
+		padding:20px 0 20px 3px;
+		margin-bottom:8px;
+		background-color:#008000;
+		font-size:12px;
+		color:#fff;
+	}
+	.flootr h4 span{
+		display:inline-block;
+		width:305px;
+		line-height:11px;
+		border-bottom:1px solid #fff;
+		color:#008000;
+	}
+	input{
+		display:inline-block;
+		width:100%;
+		height:100%;
+		outline:none;
+		text-align:center;
+		border:none;
+		/* line-height:100%; */
+		/* background-color:#000; */
+	}
+	span input{
+		background-color:#008000;
+		color:#fff;
+	}
+	textarea{
+		padding:10px 10px;
+		width:780px;
+		height:66px;
+		border:none;
+		outline:none;
+		resize:none;
+		font-weight:bold;
+		/* text-indent:2em; */
+	}
+    .por{
+        position: relative;
+    }
+    .pob{
+        position: absolute;
+        top:-1px;
+        right:-40px;
+        height: 234px;
+        width: 40px;
+
+    }
+    .pob .css{
+        height:37px;
+        width: 100%;
+        border: 1px solid black;
+        font-size:34px;
+        text-align: center;
+        line-height: 34px;
+    }
+    .btn1.hidden{
+        /*display: none;*/
+    }
+    .btn2.hidden{
+        /*display: none;*/
+    }
+    .btn3.hidden{
+        /*display: none;*/
+    }
+    .btn4.hidden{
+        /*display: none;*/
+    }
+    .btn5.hidden{
+        /*display: none;*/
+    }
+    .hidden{
+        display: none;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            body{
+                user-select: none;
+            }
+            table{
+                margin: auto;
+                border-collapse: collapse;
+            }
+            .title{
+                font-size:26px;
+                font-weight: bold;
+                text-align: left;
+            }
+            .tb1 tr:first-child{
+                font-weight: bold;
+            }
+            .color1{
+                background-color: #daeef3;
+            }
+            .color2{
+                background-color: #fde9d9;
+            }
+            .tb1 tr td:first-child{
+                font-weight: bold;
+            }
+            .tb1 tr td:nth-child(1){
+                width: 100px;
+            }
+            .tb1 tr td:nth-child(2){
+                width: 170px;
+            }
+            .tb1 tr td:nth-child(3){
+                width: 570px;
+            }
+            .tb1 td{
+                border: 1px solid black;
+            }
+            .input{
+                width:99%;
+                line-height:24px;
+                border:1px solid black;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                word-break:break-all;
+            }
+            .tb2,.tb3,.tb4,.tb5{
+                width: 95%;
+            }
+
+            .tb2 td,.tb3 td,.tb4 td,.tb5 td{
+                border: 1px solid black;
+            }
+            .center{
+                text-align: center;
+            }
+            .bold{
+                font-weight: bold;
+            }
+            .title{
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+ </head>
+ <body><!-- 网页的身体部分 可视化区域 内容区-->
+	<div id="wrap">
+		<div class="headr">
+			<h2 class="titl">Interview Evaluation Form</h2>
+			<div class="tbody">
+				<ul class="list clearfix">
+					<li><p>Candidate</p><input class="in" type="text" /></li>
+					<li><p>Target Position</p><input class="in" ="text" /></li>
+					<li><p>Interviewer</p><input class="in" type="text" /></li>
+					<li><p>Interview  Date</p><input class="in" type="text" /></li>
+				</ul>
+			</div>
+			<div class="content">
+				<p>Tips: </p>
+				<p>1. The following Process & Structure are for all interviewers’ reference during the interview to ensure creating a good experience for candidates, further interview evaluation and making decision.</p>
+				<p>2. The Interview Evaluation Form is for all interviewers’ further usages.</p>
+			</div>
+			<div class="tfloot">
+				<h3>Interview Process & Structure</h3>
+				<div>
+					<dl>
+						<dt>1.Before Interview</dt>
+						<dd>a) double confirm interview criteria with all interviewers</dd>
+						<dd>b) read JD(be familiar with Job Responsibilities & requirements)</dd>
+						<dd>c) read CV(design questions to unclear/suspicious part and key criteria)</dd>
+					</dl>
+					<dl>
+						<dt>2.Opening</dt>
+						<dd>a) Self-introduce</dd>
+						<dd>b) Small talk to make a comfort interview environment</dd>
+						<dd>c) Introduce interview arrangement</dd>
+					</dl>
+					<dl>
+						<dt>3.Interview Assessment</dt>
+					</dl>
+					<dl>
+						<dt>4.Ending</dt>
+						<dd>a) Double check candidate's interest and sale company and position if need</dd>
+						<dd>b) Introduce next round interview arrangment plan if nee</dd>
+						<dd>c) Leave time for candidate's questions</dd>
+						<dd>d) Express thanks and send candidate to leave</dd>
+					</dl>
+					<dl>
+						<dt>5.Interview Evaluation Form</dt>
+						<dd>a) Please fill this from asap after interview and sent back to Recruiter within 3 working days</dd>
+						<dd>b) Recruiter need upload it intoTalentlink Recruitement</dd>
+					</dl>
+				</div>
+			</div>	
+		</div>
+		<div class="bodyr">
+			<h3>Motivation Fit (for both the position and the Group)</h3>
+			<div>	
+				<ul class="clearfix">
+					<li>Category</li>
+					<li>Rating</li>
+					<li>Description</li>
+					<li>Comments<span color:red >*必填</span></li>
+					<li>Leaving Reason</li>
+					<li>
+						<select name="" id="">
+							<option value="">Please Select</option>
+							<option value="">Positive Performance</option>
+							<option value="">Negative Performance</option>
+						</select>
+					</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li>
+						New job preference <span>(Option)</span>	
+					</li>
+					<li>
+						<select name="" id="">
+							<option value="">Please Select</option>
+							<option value="">Positive Performance</option>
+							<option value="">Negative Performance</option>
+						</select>
+					</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li>
+						Attractive points<span>(Option)</span>
+					</li>
+					<li>
+						<select name="" id="">
+							<option value="">Please Select</option>
+							<option value="">Positive Performance</option>
+							<option value="">Negative Performance</option>
+						</select>
+					</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+				</ul>
+			</div>
+			<h3>Value Fit (for both the Position and the Group)  -><span>确认下是否换上New People Vision；中文版何时出</span></h3>
+			<div class="por">
+				<ul class="clearfix por ul">
+					<li>Category</li>
+					<li>Rating</li>
+					<li>Description</li>
+					<li>Comments<span>*必填</span></li>
+
+
+					<li class="btn1">Straigtforward</li>
+					<li class="btn1">
+						<select name="" id="">
+							<option value="">Role Model</option>
+							<option value="">Demonstrated</option>
+							<option value="">Improvement Area</option>
+						</select>
+					</li>
+					<li class="btn1"><input type="text" /></li>
+					<li class="btn1"><input type="text" /></li>
+
+
+					<li class="btn2">Challenge</li>
+					<li class="btn2">
+						<select name="" id="">
+							<option value="">Role Model</option>
+							<option value="">Demonstrated</option>
+							<option value="">Improvement Area</option>
+						</select>
+					</li>
+					<li class="btn2"><input type="text" /></li>
+					<li class="btn2"><input type="text" /></li>
+
+
+
+					<li class="btn3">Open</li>
+					<li class="btn3">
+						<select name="" id="">
+							<option value="">Role Model</option>
+							<option value="">Demonstrated</option>
+							<option value="">Improvement Area</option>
+						</select>
+					</li>
+					<li class="btn3"><input type="text" /></li>
+					<li class="btn3"><input type="text" /></li>
+
+
+
+					<li class="btn4">Passionate</li>
+					<li class="btn4">
+						<select name="" id="">
+							<option value="">Role Model</option>
+							<option value="">Demonstrated</option>
+							<option value="">Improvement Area</option>
+						</select>
+					</li>
+					<li class="btn4"><input type="text" /></li>
+					<li class="btn4"><input type="text" /></li>
+
+
+
+					<li class="btn5">Effective</li>
+					<li class="btn5">
+						<select name="" id="">
+							<option value="">Role Model</option>
+							<option value="">Demonstrated</option>
+							<option value="">Improvement Area</option>
+						</select>
+					</li>
+					<li class="btn5"><input type="text" /></li>
+					<li class="btn5"><input type="text" /></li>
+
+
+
+				</ul>
+            <div class="btn pob">
+                <div class="css">+</div>
+                <div class="css">-</div>
+                <div class="css">-</div>
+                <div class="css">-</div>
+                <div class="css">-</div>
+                <div class="css">-</div>
+
+            </div>
+			</div>
+			<h3>Potential Assessment</h3>
+			<div>	
+				<ul class="clearfix">
+					<li>Category</li>
+					<li>Positive Performance</li>
+					<li>Negative Performance</li>
+					<li>Comments</li>
+					<li>Ability</li>
+					<li><input type="text" /></li>
+					<li><input type="text" />/li>
+					<li><input type="text" />/li>
+					<li>Agility</li>
+					<li><input type="text" />/li>
+					<li><input type="text" />/li>
+					<li><input type="text" />/li>
+					<li>Ambition</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+				</ul>
+			</div>
+			<h3>Functional Assessment</h3>
+			<div>	
+				<ul class="clearfix">
+					<li>No.</li>
+					<li>	
+						<div>
+							<p>Interview Criteria</p>
+							<p>(Top 3~5 Assessment Criteria)</p>
+						</div>
+					</li>
+					<li>Rating</li>
+					<li>
+						<div>
+							<p>Comments or S.T.A.R.</p>
+							<p>(Situation, Task, Action, Result)</p>
+						</div>
+					</li>
+					<li>1</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li><input type="text" />/li>
+					<li>2</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li>3</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li>4</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li>5</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li>6</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li>7</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li>8</li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+					<li><input type="text" /></li>
+				</ul>
+			</div>
+		</div>
+		<div class="flootr">
+			<h3>Area to Improve: pls give specific reasons</h3>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<h3>Overall Comments: pls give specific reasons</h3>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<h4>Please indicate your final decision: : <span><input type="text" /></span>(MUST)<br>(Pass; Failed; Pending for further check; Refer to other position; )</h4>
+			<dl>
+				<dt>Guide for Rating</dt>
+				<dt>5 = Consistently exceeds requirements</dt>
+				<dt>4 = Exceeds requirements</dt>
+				<dt>3 = Meets requirements</dt>
+				<dt>2 = Partially meets requirements</dt>
+				<dt>1 = Cannot meet requirements</dt>
+			</dl>
+		</div>	
+	</div>
+	 <table class="tb1">
+            <caption class="title">Interview Question Pool - Motivation</caption>
+            <tr>
+                <td class="color1">Check Point</td>
+                <td class="color1">Check Point</td>
+                <td class="color1">Questions</td>
+                <td class="color2">Positive Performance</td>
+                <td class="color2">Negative Performance</td>
+            </tr>
+            <tr>
+                <td>Motivation</td>
+                <td>
+                    • Leaving Reason </br>
+                    • New job preference</br>
+                    • Attractive points</br>
+                </td>
+                <td>
+                    1. Why do/did you leave your current/previous companies?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. What kind of job opportunity attracts you?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    3. What's your top 3 priority when you consider to take or not take a job?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    4. What kind of team style and boss style do you like?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    5. What do you dislike most of your current work?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>
+                    • show strong willingness of personal development; or reasonable reason of changing jobs.(mature, realistic)</br>
+                    • objectively comment previous employer</br>
+                </td>
+                <td>
+                    • express too much negative points of pervious employer(emotional)</br>
+                    • weak motivation to change job, window shopping attitude</br>
+                    • hide real motivation(e.g.. too eager to change; accept down grade/salary position.)</br>
+                </td>
+            </tr>
+        </table>
+        <table class="tb2">
+            <caption class="title">Interview Question Pool - Value fit </caption>
+            <tr>
+                <td class="color1 center bold" rowspan="2">Category</td>
+                <td class="color1 center bold"  rowspan="2">Dimension</td>
+                <td class="color1 center bold" rowspan="2">Check Points</td>
+                <td class="color1 center bold" rowspan="2">Question List</td>
+                <td class="color2 center bold" colspan="3">Proficiency Level</td>
+            </tr>
+            <tr>
+                <td class="color2 center bold">Role Model</td>
+                <td class="color2 center bold">Demonstrated</td>
+                <td class="color2 center bold">Improvement Area</td>
+            </tr>
+            <tr>
+                <td class="bold"rowspan="12">SCOPE Value fit</td>
+                <td rowspan="3">Straightforward</td>
+                <td>We are Straightforward</td>
+
+                <td>
+                    1. When delivering personal viewpoint/raising request/rejecting other's request, what kind of communication type do you prefer to use?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td rowspan="3">Sets highest standard for clarity and integrity in communication. Goes above and beyond to ensure that commitments are delivered. </td>
+                <td rowspan="3">Straightforward and open in communicating, sharing ideas and information with colleagues. Strong track record for delivering on commitments. </td>
+                <td rowspan="3">Straightforward and open in communicating, sharing ideas and information with colleagues. Strong track record for delivering on commitments. </td>
+            </tr>
+            <tr>
+                <td>We do what we say and
+                    we communicate in simple ways</td>
+                <td>
+                    1. Can you accept one's words are not matched by deeds? Did you ever fail to do what you say?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. How do you explain/express a very complicated concept/event to others?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>We behave with integrity</td>
+                <td>
+                    1. How do you respond when other colleagues's mistake may affect the project/task, while won't influence your personal KPI?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. Do you think lie is acceptable in the work? Have you once lied to others?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Challenge</td>
+                <td>We Challenge ourselves and others to rethink what is expected</td>
+                <td>
+                    1. Have you ever rethinked your current work module/ process? Take an example for that.
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. How do you respond when your thought is quite different from others in a group discussion?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td rowspan="2">Challenges and engages others and the organisation to think differently for the future. Implements step-change innovations and brings others along the way.</td>
+                <td rowspan="2">Challenges the status quo in a constructive way. Creative and flexible in generating and considering new options and solutions. </td>
+                <td rowspan="2">Reluctant to question and change the status quo. Finds it hard to go beyond established methods in the quest for improved performance.</td>
+            </tr>
+            <tr>
+                <td>We are agile and move at the speed of change.</td>
+                <td>
+                    1. How do you feel when facing the orgnization/process/product/industry trend change?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Open</td>
+                <td>We value differences.</td>
+                <td>
+                    1. How do you feel and react when your suggestion/proposal was rejected by others?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. What kind of boss/team do you like to work with?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td rowspan="2">Seeks out new and diverse internal and external views and ideas. Leverages insights to drive business growth. Embraces life-long learning and instills this in others.</td>
+                <td rowspan="2">Open to new ideas through regular exchange and connecting with others. Collaborates inside and outside of the organisation. Actively learning every day. </td>
+                <td rowspan="2">Critical of new ideas to the point of conservatism or defensiveness. Is resistant to feedback and shows little motivation to learn or leverage others inside or outside SE. </td>
+            </tr>
+            <tr>
+                <td>We listen. We learn, connect and collaborate with others</td>
+                <td>
+                    1. Did you pay attention to your colleauges' behavior and performance? Did you learn anything from them ?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. Please give an example of one successful/ fail case on team work. What's the key points to the success/failure?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Passionate</td>
+                <td>We are Passionate about our customers, our people, our business and our technology.</td>
+                <td>
+                    1. How do you respond to the new requirements from your clients/colleagues/technology?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. What's the latest technology/concept/development trend in your field? How could it be connected with your work?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td rowspan="2">Advocates for and champions SE’s business offers and technical solutions. Inspires and delivers beyond the expectations of customers and colleagues. </td>
+                <td rowspan="2">Positive and energetic towards our business and technology and committed to customers and colleagues. Shows that the role is more than ‘just a job’. </td>
+                <td rowspan="2">Limited interest in or commitment to our business or technology, and does not attempt to fill knowledge gaps. Low or passive engagement with customers or colleagues.</td>
+            </tr>
+            <tr>
+                <td>We are positive in our approach to finding solutions that better our lives. </td>
+                <td>
+                    1. How do you feel and react when facing challenges?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. How will you complete project/task successfully when you are strictly lack of resources?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3">Effective</td>
+                <td>We are Effective. We are pragmatic, fast.</td>
+                <td>
+                    1. How do you achieve the challenge task in a short time?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. How do you handle multi-task? What's the key point to work efficiently?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td rowspan="3">Gets great results even under extreme time pressure or multiple demands. Recognized for ‘getting things done’ with speed and excellence.</td>
+                <td rowspan="3">Agile in balancing competing business demands, delivering quality results effectively and quickly. </td>
+                <td rowspan="3">Unable to balance competing priorities. Too focused on either speed or perfection, leading to poor or delayed results or missed opportunities. </td>
+            </tr>
+            <tr>
+                <td>We deliver on promises. </td>
+                <td>
+                    1. How do you see commitment?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. Have you ever failed on delviering your promise?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>We compete to win</td>
+                <td>
+                    1. Have you ever set yourself an ambitious goal and how did you achieve it?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. How do you facilitate a project/task when it was suspended due to different kinds of diffculties?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+            </tr>
+        </table>
+        <table class="tb3">
+            <caption class="title">Interview Question Pool - Potential</caption>
+            <tr>
+                <td class="center color1 bold">Category</td>
+                <td class="center color1 bold">Dimension</td>
+                <td class="center color1 bold">Check Points</td>
+                <td class="center color1 bold">Question Pool</td>
+                <td class="center color2 bold">Positive performance</td>
+                <td class="center color2 bold"> Negative Performance</td>
+            </tr>
+            <tr>
+                <td class="center bold" rowspan="9">Potential</td>
+                <td rowspan="3"><span class="bold">Ability:</span> Does the individual show capability and collaboration to deliver impact?</td>
+                <td>
+                    Does the individual think strategically and execute effectively?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>
+                    1. What’s the relationship of corporate strategy with your daily work? What did you do to to go with the strategy change?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>Clearly understand the relation between corporate strategy and work.</td>
+                <td>Don't know corporate stragety, and can't make any examples. </td>
+            </tr>
+            <tr>
+
+                <td>Does the individual build great and diverse teams?
+                    <div class='input' contenteditable placeholder='请输入文字'></div></td>
+                <td>
+                    1. How do you score your current team if full score is 10? What's pros and cons of your team? How will you adjust the orgnization if you're team manager?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>Have big picture on team and clear about how to orgnize team.</td>
+                <td>Know nothing about team situation, has no thought on team org. </td>
+            </tr>
+            <tr>
+                <td>Does the individual embrace the business opportunities for digital?
+                    <div class='input' contenteditable placeholder='请输入文字'></div></td>
+                <td>
+                    1. What's the influence of digital age on your work? Please illustrate.
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                    2. If you are asked to digitalize part of your work which you think is hard, what's your reaction?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>proactive on work digitalization and have deep insight of digital market trend</td>
+                <td>
+                    Know nothing about digitalization, and not willing to do any change
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3"><span class="bold">Agility:</span> Does the individual show adaptability and an appetite for new challenges?</td>
+                <td>Has the individual demonstrated innovation and worked to transform our business?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>
+                    1. Have you ever done any innovation? Please describe. What's the benefit to corporate business?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>
+                    Clearly describe the innovation and its benefit
+                </td>
+                <td>Never do innovation, or can't give examples</td>
+            </tr>
+            <tr>
+                <td>
+                    Does the individual demonstrate curiousity and a desire to learn and collaborate?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>
+                    1. If you're given a very complicated task which is out of your scope, what's your response?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>
+                    Willing to take the task and fully leverage resources to complete it
+                </td>
+                <td>Reject to take the taks or treat it with negative attitude</td>
+            </tr>
+            <tr>
+                <td>Has the individual managed ambiguity and change well?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>
+                    1. If your supervisor deliver you an immature and ambiguous idea, how will you turn it to practice?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>
+                    Keep communication with supervisor, and get good result on turning thoughts to pratice
+                </td>
+                <td>
+                    Do not make any action and do not get any result
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3"><span class="bold">Ambition:</span> Does the individual show drive and desire to grow the business and their career?</td>
+                <td>Does the individual drive high performance for self and others?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>1. What's your performance rating? How do you drive yourself or team to hit higher performance?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>Proactively to drive self and team performance</td>
+                <td>Do not care performance, think it's good keep current status</td>
+            </tr>
+            <tr>
+                <td>Is the individual open to career growth and new challenges?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>1. Are you willing to transfer to a much stranger but more challenging work, such as XXX? (Open to presume by the cdd's current position)
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>
+                    Willing to take challenge, and make full preparation
+                </td>
+                <td>Don't want to make any new career development or take any challenge work</td>
+
+            </tr>
+            <tr>
+                <td>Does the individual show resilience and tenacity?
+                    <div class='input' contenteditable placeholder='请输入文字'></div></td>
+                <td>
+                    1. What's the most challenging situation in your work/life? How do struggle out?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+
+                </td>
+                <td>
+                    Clearly describe the challenging point, and learn from it
+                </td>
+                <td>No experience to handle challenging situation or finally fail in the task</td>
+            </tr>
+        </table>
+        <table class="tb4">
+            <caption class="title">Situational Interview Question Pool - R&D PM</caption>
+            <tr>
+                <td class="color1 bold center">Function</td>
+                <td class="color1 bold center">No.</td>
+                <td class="color1 bold center">Check points </td>
+                <td class="color1 bold center">Situational Question</td>
+                <td class="color2 bold center">High performance</td>
+                <td class="color2 bold center">Low Performance</td>
+            </tr>
+            <tr>
+                <td class="center bold" rowspan="5">R&D-PM</td>
+                <td class="center bold" rowspan="2">1</td>
+                <td  class="center bold" rowspan="2">Project Team Management</td>
+                <td>
+                    1. You are now leading a global project team to develop a new product. In the brainstorm meeting, team members put forward many innovative thougths, and members from different contries have different ideas, while some thoughts are conflict with each other. How will you handle the conflict and lead team to hit the goal?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+
+                </td>
+                <td>Quickly identify and combine useful and feasible ideas and make the whole team members comfortable and happy</td>
+                <td>Don't know how to choose, and make the team unhappy</td>
+            </tr>
+            <tr>
+                <td>
+                    2.You're a PMO in SE. there're several Porject Managers resign one after another and result in the slow move of projects. How will you deal with it?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+
+                </td>
+                <td>Dive into the reason of high turn over rate, meanwhile proactively leverage other resources to keep the project run</td>
+                <td>Feel upset and delay all the projects</td>
+            </tr>
+            <tr>
+                <td class="center bold" rowspan="3">2</td>
+                <td class="center bold" rowspan="3">Project Management</td>
+                <td>1.If project quality engineer find big quality issue in the product and ask you to re-launch the R&D process which will lead to project delay and over budget issue, how will you handle this to prevent client's unsatisfaction?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+
+                </td>
+                <td>Actively resolve the technical problem, meanwhile do best to shorten the project delay period, and get understand from client</td>
+                <td>Can't make any progress and lose the project</td>
+            </tr>
+            <tr>
+                <td>
+                    2.If your porject budget is cut partly, how will you make sure that with no additional HC, the project can be delivered in time with good qulity?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+
+                </td>
+                <td>proactively leverage other resources to keep the quality of the project </td>
+                <td>Upset with limited budget, and can't implement the project</td>
+            </tr>
+            <tr>
+                <td>
+                    3.According to market needs, marketing raise a new product development requirement to you, while you don't think this product is in line with current market trend, maybe will be quickly passed even before the development is done. On the other hand, market holds a very positive attitude on the product. How will you react on that?
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+
+                </td>
+                <td>Effectively communicate internally and make improvement to reach win-win result</td>
+                <td>
+                    Not listen to marketing or treat the project passively
+                </td>
+            </tr>
+        </table>
+        <table class="tb5">
+            <caption class="title">Situational Question Pool - Sales</caption>
+            <tr>
+                <td class="color1 bold center">Function</td>
+                <td class="color1 bold center">Check points</td>
+                <td class="color1 bold center">Situational Question</td>
+                <td class="color2 bold center">High performance</td>
+                <td class="color2 bold center">Low Performance</td>
+            </tr>
+            <tr>
+                <td class=" bold center" rowspan="3">通用销售岗位</td>
+                <td class=" bold center" rowspan="3">销售综合能力</td>
+                <td>1.你是一个大四学生，毕业的时候你要把你的高数书卖给大一新生，这本书标价20，你会以什么价格，什么方式来出售这本书？考官扮演新生，候选人扮演大四学生
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>能抓住新生的需求，突出这本高数数对比新书的附加值，最终能以高于原价出售该书</td>
+                <td>单纯靠低价打折来出售</td>
+            </tr>
+            <tr>
+                <td>
+                    2.丽莎是一名家庭主妇，生平最讨厌推销员，而且她对产品有一种高度忠诚，不会轻易更换产品，你要向她推销你们公司的新产品，你该怎么办？产品自定义。由一位考官来扮演丽莎，候选人扮演推销者
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>有技巧的让丽莎愿意开始和自己对话能了解目前丽莎使用现在产品中的一些满意的点和痛点
+                    能接受新的产品</td>
+                <td>不管丽莎的需求只顾营销自己的产品</td>
+            </tr>
+            <tr>
+                <td>
+                    3.如果你是销售，要约一个客户公司的领导出来吃饭，但是该公司领导一再以工作很忙，没时间赴约推脱，你还会如何继续约这个饭局？如果原来工作中有真实的案例也可以分享
+                    <div class='input' contenteditable placeholder='请输入文字'></div>
+                </td>
+                <td>最好举一个具体的案例，能体现销售人员的人际沟通技巧</td>
+                <td>放弃或没有技巧</td>
+            </tr>
+        </table>
+
+        <script>
+            (function () {
+                let oUL=document.querySelector(".bodyr .ul"),
+                    aBtn=document.querySelectorAll(".bodyr .btn .css"),
+                    //删除内容节点的对应位置
+                    aBtn1=[...document.querySelectorAll(".bodyr .btn1")],
+                    aBtn2=[...document.querySelectorAll(".bodyr .btn2")],
+                    aBtn3=[...document.querySelectorAll(".bodyr .btn3")],
+                    aBtn4=[...document.querySelectorAll(".bodyr .btn4")],
+                    aBtn5=[...document.querySelectorAll(".bodyr .btn5")]
+                ;
+                //添加按钮
+                aBtn[0].onclick=function () {
+                    let oF=document.createDocumentFragment();
+                    let oLi1=document.createElement("li");
+                    let oLi2=document.createElement("li");
+                    let oLi3=document.createElement("li");
+                    let oLi4=document.createElement("li");
+                    let oInp1=document.createElement("input");
+                    let oInp2=document.createElement("input");
+                    let oInp3=document.createElement("input");
+                    let oInp4=document.createElement("input");
+                    oLi1.appendChild(oInp1);
+                    oLi2.appendChild(oInp2);
+                    oLi3.appendChild(oInp3);
+                    oLi4.appendChild(oInp4);
+                    oF.appendChild(oLi1);
+                    oF.appendChild(oLi2);
+                    oF.appendChild(oLi3);
+                    oF.appendChild(oLi4);
+                    oUL.appendChild(oF);
+                }
+                //删除按钮
+                aBtn[1].onclick=function () {
+                    this.classList.add("hidden");
+                    aBtn1.forEach(function (ele,index) {
+                        ele.classList.add("hidden");
+                    })
+                }
+                aBtn[2].onclick=function () {
+                    this.classList.add("hidden");
+                    aBtn2.forEach(function (ele,index) {
+                        ele.classList.add("hidden");
+                    })
+                }
+                aBtn[3].onclick=function () {
+                    this.classList.add("hidden");
+                    aBtn3.forEach(function (ele,index) {
+                        ele.classList.add("hidden");
+                    })
+                }
+                aBtn[4].onclick=function () {
+                    this.classList.add("hidden");
+                    aBtn4.forEach(function (ele,index) {
+                        ele.classList.add("hidden");
+                    })
+                }
+                aBtn[5].onclick=function () {
+                    this.classList.add("hidden");
+                    aBtn5.forEach(function (ele,index) {
+                        ele.classList.add("hidden");
+                    })
+                }
+
+
+
+            })()
+
+
+            // for(let i=1;i<=5;i++){
+            //     aBtn[i].onclick=function () {
+            //         oBtn`${i}`.classList.add("hidden");
+            //     }
+            // }
+        </script>
+
+ </body>
+</html>

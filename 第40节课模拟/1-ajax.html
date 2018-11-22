@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;user-select:none;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            //创建 对象
+            const ajax=new XMLHttpRequest();
+            //监听状态的改变
+            ajax.onreadystatechange=function(){
+                if(ajax.readyState===4&&ajax.status===200){
+                    // console.log(ajax.response);  http.js  koa.js
+                    //字符串转换成数组
+                    // console.log(JSON.parse(ajax.response)) data.php
+                    console.log(ajax.response);
+                }
+            }
+            // ajax.open('get','http://127.0.0.1:6060',true);
+            ajax.open('get','http://127.0.0.1:6062',true);
+            ajax.send()
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

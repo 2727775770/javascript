@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+			.box{
+				width:860px;
+				height:530px;
+				padding:50px;
+				margin:50px auto 0;
+				border:1px solid red;
+			}
+			.box ul{
+				width:860px;
+				height:480px;
+				
+			}
+			.box ul li{
+				position:relative;
+				float:left;
+				width:190px;
+				height:220px;
+				margin-bottom:20px;
+				margin-left:20px;
+			}
+			.box ul li p{
+				font-size:14px;
+			}
+			.box ul li .flower{
+				width:100%;
+				height:190px;
+			}
+			.box ul li .price{
+				position:absolute;
+				bottom:-10px;
+				right:-15px;
+				width:50px;
+				background:url("img/price.png") no-repeat 0 0/50px;
+				height:50px;
+				color:white;
+				font-size:16px;
+				font-weight:bold;
+				text-indent:7px;
+				line-height:45px;
+			}
+			.clearfixed::after{
+				content:'';
+				display:block;
+				clear:both;
+			}
+			.box .btn{
+				width:380px;
+				height:80px;
+				margin-left:520px;
+			}
+			.box .btn span{
+				display:inline-block;
+				width:100px;
+				height:80px;
+				margin-left:20px;
+				background-color:#f60;
+				border-radius:10px;
+				color:#6f0;
+				font-size:16px;
+				font-weight:bold;
+				line-height:80px;
+				text-align:center;
+				letter-spacing:1px;
+				cursor:pointer;
+			}
+	    </style>
+    </head>
+    <body>
+		<div class="box">
+			<ul class="clearfixed">
+				<!-- <li>
+					<img class="flower" src="img/1.jpg" width="400" height="400" border="0" alt="">
+					<p class="title">深红色经典玫瑰</p>
+					<span class="price">
+						`${data[0].price}`
+					</span>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li> -->
+			</ul>
+			<div class="btn">
+				<span>随机生成</span>
+				<span>从高到低</span>
+				<span>从低到高</span>
+			</div>
+		</div>
+        <script>
+			(function(data){
+				//生产花的内容区域
+				function creatdom(data){
+					//变量
+					let oUl=document.querySelector(".box ul"),
+						html="";
+					data.forEach(function(d){//d表示序号
+						html+=`<li>
+								   <img class="flower" src=${d.src} width="400" height="400" border="0" alt="">
+								   <p class="title">${d.title}</p>
+								   <span class="price">${d.price}</span>
+							   </li>`
+					});
+					oUl.innerHTML=html;
+				}
+				creatdom(data);
+				//点击事件
+				(function(){
+					let aSpan=[...document.querySelectorAll(".btn span")];
+					aSpan.forEach(function(node,index){
+					    //按钮事件
+					    let fnsort=[
+                            ()=>Math.random()-0.5,
+                            (a,b)=> a.price-b.price,
+                            (a,b)=> b.price-a.price,
+                        ]
+						node.onclick=()=>{
+						    //按钮事件
+							// switch(index){
+							// 	case 0:
+							// 		data.sort(function (a,b) {
+                            //             return Math.random()-0.5
+                            //         })
+							// 		break;
+							// 	case 1:
+							// 		data.sort(function (a,b) {
+                            //             return a.price-b.price;
+                            //         })
+							// 		break;
+							// 	case 2:
+                            //         data.sort(function (a,b) {
+                            //             return b.price-a.price;
+                            //         })
+							// 		break;
+							// }
+                            data.sort(fnsort[index]);
+						    creatdom(data);
+						}
+					})
+				})();
+			})(
+				[
+					{
+						src:"img/1.jpg",
+						price:100,
+						title:"深红色经典玫瑰"
+					},
+					{
+						src:"img/2.jpg",
+						price:97,
+						title:"甜美七分袖荷叶边条纹设"
+					},
+					{
+						src:"img/3.jpg",
+						price:98.5,
+						title:"甜美七分袖荷叶边条纹设"
+					},
+					{
+						src:"img/4.jpg",
+						price:215,
+						title:"甜美七分袖荷叶边条纹设"
+					},
+					{
+						src:"img/5.jpg",
+						price:130,
+						title:"经典红色我的最爱"
+					},
+					{
+						src:"img/6.jpg",
+						price:300,
+						title:"清淡优雅百年百合"
+					},
+					{
+						src:"img/7.jpg",
+						price:700,
+						title:"紫色冷艳系列"
+					},
+					{
+						src:"img/8.jpg",
+						price:500,
+						title:"粉色浪漫系列玫瑰"
+					}
+				]
+			)
+        </script>
+    </body>
+</html>
+
+
+

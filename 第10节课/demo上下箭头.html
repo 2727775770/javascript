@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            .arrow{
+                margin:80px auto;
+                background-color:blueviolet;
+                text-align:center;
+            }
+            .arrow div{
+                float:left;
+                width:50px;
+                height:50px;
+                background-color:red;
+                color:lightgreen;
+                font-size:32px;
+                font-weight:bold;
+                text-align: center;
+                line-height:50px;
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="arrow">
+        </div>
+        <div class="arrow">
+        </div>
+        <script>
+            let aArrow=document.getElementsByClassName("arrow");
+            let num=7;
+            let mid;
+            let arrow0="";
+            let arrow1="";
+            if(num%2){
+                mid=(num+1)/2;
+            }else{
+                mid=num/2;
+            }
+            aArrow[0].style.height=mid*50+"px";
+            aArrow[1].style.height=mid*50+"px";
+            aArrow[0].style.width=num*50+"px";
+            aArrow[1].style.width=num*50+"px";
+            for(let i=0; i<num;i++){
+                // if(i<mid){
+                //     arrow0+=`<div style="margin-top:${i*50}px;">${i+1}</div>`;
+                // }else{
+                //     arrow0+=`<div style="margin-top:${(num-i-1)*50}px;">${i+1}</div>`;
+                // }
+                    let x=i<mid?i:(num-i-1);
+                    arrow0+=`<div style="margin-top:${x*50}px;">${i+1}</div>`;
+            }//箭头向下
+            aArrow[0].innerHTML=arrow0;
+            for(let i=0; i<num;i++){
+                // if(i<mid){
+                //     arrow1+=`<div style="margin-top:${(mid-i-1)*50}px;">${i+1}</div>`;
+                // }else{
+                //     arrow1+=`<div style="margin-top:${(mid-num+i)*50}px;">${i+1}</div>`;
+                // }
+                    let x= i<mid?(mid-i-1):(mid-num+i);
+                    arrow1+=`<div style="margin-top:${x*50}px;">${i+1}</div>`;
+            }//箭头向上
+            aArrow[1].innerHTML=arrow1;
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

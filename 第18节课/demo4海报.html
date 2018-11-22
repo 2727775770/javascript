@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .banner{
+                width:1100px;
+                height:360px;
+                padding-top: 8px;
+                margin:80px auto 0;
+                border:1px solid red;
+                user-select: none;
+            }
+            .banner .banner-top{
+                width: 100%;
+                height:40px;
+                background-color:#f5f5f5;
+            }
+            .clearfixed:after{
+                content:"";
+                display: block;
+                clear:both;
+            }
+            .banner-top h4{
+                position: relative;
+                float: left;
+                width:132px;
+                height:100%;
+                background-color: black;
+                color:white;
+                font-size:14px;
+                text-align:center;
+                line-height: 40px;
+            }
+            .banner-top h4:after{
+                content:"";
+                position: absolute;
+                top:0;
+                bottom:0;
+                right:-6px;
+                margin:auto;
+                width:0;
+                height:0;
+                border:6px solid;
+                border-color: transparent transparent transparent black;
+                border-right:none;
+            }
+            .banner-top ul{
+                float: left;
+                height:40px;
+                margin-left:30px;
+                line-height: 40px;
+            }
+            .banner-top .title-list li{
+                position: relative;
+                float: left;
+                height:38px;
+                margin:0 10px;
+                font-size:14px;
+                text-align:center;
+                cursor: pointer;
+            }
+            .banner-top .title-list li.active{
+                color:#db3a45;
+            }
+            .banner-top .title-list li:after{
+                display: block;
+                content: "";
+                position:absolute;
+                right:0;
+                left:0;
+                bottom:0;
+                width: 20px;
+                height: 2px;
+                margin:auto;
+                background-color:#db3a45;
+                text-align: center;
+                opacity: 0;
+                transition:opacity 0s,width 1s ;
+            }
+            .banner-top .title-list li.show:after{
+                display: block;
+                width:100%;
+                opacity: 1;
+            }
+            .banner-bottom{
+                position: relative;
+                width:100%;
+                height:300px;
+                margin-top:18px;
+            }
+            .banner-bottom .list{
+                display: none;
+                position: absolute;
+                width:100%;
+                height:300px;
+            }
+            .banner-bottom .list.show{
+                display: block;
+            }
+            .banner-bottom .list li{
+                float: left;
+                height:300px;
+                width:340px;
+                margin-right:26px;
+            }
+            .banner-bottom .list li p{
+                overflow:hidden;
+                font-size:14px;
+                white-space:nowrap;
+                line-height:35px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="banner clearfixed">
+            <div class="banner-top">
+                <h4 class="title">独家精品策划</h4>
+                <ul class="title-list clearfixed">
+                    <li class="show">全部</li>
+                    <li>时装周</li>
+                    <li>潮我看齐</li>
+                    <li>搭配速成班</li>
+                    <li>恋物趣</li>
+                    <li>谁最有范</li>
+                </ul>
+            </div>
+            <div class="banner-bottom">
+                <ul class="list clearfixed show">
+                    <li>
+                        <img src="img/1.jpg" height="256" width="340"/>
+                        <p>潮我看齐：罗志祥携手CTO男团</p>
+                    </li>
+                    <li>
+                        <img src="img/2.jpg" height="256" width="340"/>
+                        <p>2019春夏巴黎时装周</p>
+                    </li>
+                    <li>
+                        <img src="img/3.jpg" height="256" width="340"/>
+                        <p>搭配速成班：宋轶亲身教你3种心机约会装！</p>
+                    </li>
+                </ul>
+                <ul class="list clearfixed">
+                    <li>
+                        <img src="img/2.jpg" height="256" width="340"/>
+                        <p>2019春夏巴黎时装周</p>
+                    </li>
+                    <li>
+                        <img src="img/4.jpg" height="256" width="340"/>
+                        <p>2019春夏米兰时装周</p>
+                    </li>
+                    <li>
+                        <img src="img/5.jpg" height="256" width="340"/>
+                        <p>London2019</p>
+                    </li>
+                </ul>
+                <ul class="list clearfixed">
+                    <li>
+                        <img src="img/1.jpg" height="256" width="340"/>
+                        <p>潮我看齐：罗志祥携手CTO男团</p>
+                    </li>
+                    <li>
+                        <img src="img/6.jpg" height="256" width="340"/>
+                        <p>潮我看齐之马思纯，难道只用简单笑容就治愈了我？</p>
+                    </li>
+                    <li>
+                        <img src="img/7.jpg" height="256" width="340"/>
+                        <p>潮我看齐果汁女孩文咏珊</p>
+                    </li>
+                </ul>
+                <ul class="list clearfixed">
+                    <li>
+                        <img src="img/3.jpg" height="256" width="340"/>
+                        <p>搭配速成班：宋轶亲身教你3种心机约会装！</p>
+                    </li>
+                    <li>
+                        <img src="img/8.jpg" height="256" width="340"/>
+                        <p>搭配速成班:520恋爱系CP搭</p>
+                    </li>
+                    <li>
+                        <img src="img/9.jpg" height="256" width="340"/>
+                        <p>搭配速成班:文艺少女能量的荷兰之旅</p>
+                    </li>
+                </ul>
+                <ul class="list clearfixed ">
+                    <li>
+                        <img src="img/10.jpg" height="256" width="340"/>
+                        <p>恋物趣vol.13:一把神奇"信物"，开启人生无限可能</p>
+                    </li>
+                    <li>
+                        <img src="img/11.jpg" height="256" width="340"/>
+                        <p>恋物趣vol.11:我陪你走过最浪漫的路就是爱情的套路</p>
+                    </li>
+                    <li>
+                        <img src="img/12.jpg" height="256" width="340"/>
+                        <p> 恋物趣_ IWC万国表达文西女士腕表：女生们的时髦与品位全在这块腕表上！</p>
+                    </li>
+                </ul>
+                <ul class="list clearfixed">
+                    <li>
+                        <img src="img/13.jpg" height="256" width="340"/>
+                        <p>「谁最有范」之莫文蔚</p>
+                    </li>
+                    <li>
+                        <img src="img/14.jpg" height="256" width="340"/>
+                        <p>「谁最有范」之春夏，灵动之气的耿直girl</p>
+                    </li>
+                    <li>
+                        <img src="img/15.jpg" height="256" width="340"/>
+                        <p>「谁最有范」跟戚薇学穿搭打赢新年第一仗</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            let aLi=document.querySelectorAll(".banner .title-list li"),
+                aList=document.querySelectorAll(".banner-bottom .list"),
+                len=aLi.length,
+                index=0;
+            (function a() {
+                for(let i=0;i<len;i++){
+                    aLi[i].onmouseenter=function () {
+                        //上面控制下面的图片
+                        aList[index].classList.remove("show");
+                        aList[i].classList.add("show");
+                        //经过添加字体颜色
+                        aLi[index].classList.remove("active");
+                        aLi[i].classList.add("active");
+                        //添加变化样式
+                        aLi[index].classList.remove("show");
+                        aLi[i].classList.add("show");
+                        index=i;
+                    }
+                }
+            })()
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

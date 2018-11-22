@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述">
+    <meta name="author" content="潭州教育-阿飞老师">
+    <style>
+        body{font-family: "Microsoft YaHei",serif;}
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+
+        .banner{
+            position:relative;
+            width:780px;
+            height:330px;
+            margin:50px auto 0;
+            user-select: none;
+        }
+        .banner .banner-img,.banner .banner-img li,.banner .banner-img li img{
+            width:100%;;
+            height:100%;
+        }
+        .banner-img li{
+            display: none;
+            position: absolute;
+        }
+        .banner-img .active{
+            display: block;
+        }
+        .banner .banner-list{
+            height:50px;
+            background-color: #121112;
+            text-align: center;
+        }
+        .banner .banner-list li{
+            float:left;
+            width:20%;
+            height:100%;
+            color:white;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        .banner .banner-list li.active{
+            color:#ecc06c;
+            background-color: #303030;
+        }
+
+        .banner .left,.banner .right{
+            position: absolute;
+            top:50%;
+            width:50px;
+            height: 50px;
+            background-color:lightseagreen;
+            color:black;
+            font-size:25px;
+            text-align: center;
+            line-height: 50px;
+            opacity: 0.5;
+            z-index: 2;
+        }
+        .banner .left{
+            left:0;
+        }
+        .banner .right{
+            right:0;
+        }
+
+
+
+        .box{
+            position: relative;
+            width:500px;
+            height:300px;
+            margin: 20px auto 0;
+            border: 1px solid #cc3366;
+        }
+        .box .con{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 270px;
+        }
+        .con ul,.con ul li{
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .con ul li.active{
+            z-index: 1;
+        }
+        .con ul li:nth-child(1){
+            background-color: red;
+        }
+        .con ul li:nth-child(2){
+            background-color: blue;
+        }
+        .con ul li:nth-child(3){
+            background-color: yellow;
+        }
+        .box .tab{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+        }
+        .tab li{
+            float: left;
+            height: 100%;
+            width: 33.33%;
+            background-color: royalblue;
+            font-size: 24px;
+            font-weight: bolder;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .tab li.active{
+            background-color: red;
+        }
+        .tab ul{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="con">
+            <ul>
+                <li class="active">A内容</li>
+                <li>B内容</li>
+                <li>C内容</li>
+            </ul>
+        </div>
+        <div class="tab">
+            <ul>
+                <li class="active">A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="left"> &lt; </div>
+        <div class="right"> &gt; </div>
+        <ul class="banner-img">
+            <li class="active"><img src="img/1.jpg" height="330" width="780"/></li>
+            <li><img src="img/2.jpg" height="330" width="780"/></li>
+            <li><img src="img/3.jpg" height="330" width="780"/></li>
+            <li><img src="img/4.jpg" height="330" width="780"/></li>
+            <li><img src="img/5.jpg" height="330" width="780"/></li>
+        </ul>
+        <ul class="banner-list">
+            <li class="active">太空秘宝</li>
+            <li>7周年战斗之夜</li>
+            <li>星海浩瀚无畏扬帆</li>
+            <li>战斗之夜邀请函</li>
+            <li>玉剑传说限时销售</li>
+        </ul>
+    </div>
+
+    <script>
+        (function () {
+            //构造函数功能——选项卡
+            function Switchover(parent) {
+                this.con=parent.con;
+                this.tab=parent.tab;
+                this.conClass=parent.conClass||"active";
+                this.tabClass=parent.tabClass||"active";
+                this.len=this.tab.length;//按钮个数
+                this.index=0;//初始值
+                this.addClick();//添加事件
+            }
+            //全局公有属性
+            Switchover.prototype={
+                //指向本身
+                constructor:Switchover,
+                //点击事件
+                addClick:function () {
+                    for(var i=0;i<this.len;i++){
+                        (function (i) {
+                            this.tab[i].addEventListener("click",function () {//注意传i
+                                this.change(i);
+                            }.bind(this),false);
+                        }).call(this,i);
+                    }
+                },
+                //变化量
+                change:function (i) {
+                    if( this.index === i )return;
+                    this.con[this.index].classList.remove(this.conClass);
+                    this.tab[this.index].classList.remove(this.tabClass);
+                    this.index=i;
+                    this.con[this.index].classList.add(this.conClass);
+                    this.tab[this.index].classList.add(this.tabClass);
+                }
+            }
+
+            //继承 多加个功能 自动轮播
+            //公有继承
+            function Switchover2(parent) {
+                Switchover.call(this,parent);
+
+                this.banner=parent.banner;
+                this.time=null;
+                this.autoplay();
+                this.stopplay();
+            }
+            //私有（原型）继承
+            function Fn(){};
+            Fn.prototype=Switchover.prototype;
+            Switchover2.prototype=new Fn();
+            Switchover2.prototype.constructor=Switchover2;
+            //自动播放
+            Switchover2.prototype.autoplay=function () {
+                this.time=setInterval(function () {
+                    var i=this.index;
+                    i++;
+                    i%=this.len;
+                    this.change(i);
+                }.bind(this),1000);
+            }
+            //经过暂停
+            Switchover2.prototype.stopplay=function () {
+                this.banner.onmouseenter=function () {
+                    clearTimeout(this.time);
+                }.bind(this);
+                this.banner.onmouseleave=function () {
+                    this.autoplay();
+                }.bind(this);
+            }
+
+            //实例化
+            new Switchover({
+                con:document.querySelectorAll(".box .con ul li"),
+                tab:document.querySelectorAll(".box .tab ul li")
+            });
+            new Switchover2({
+                con:document.querySelectorAll(".banner .banner-img li"),
+                tab:document.querySelectorAll(".banner .banner-list li"),
+                banner:document.querySelector(".banner")
+            })
+
+
+
+
+            // this.tab[i].onclick=function () {//注意传i
+            //     this.change(i);
+            // }.bind(this);
+        })()
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

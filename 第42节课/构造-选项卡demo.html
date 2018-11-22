@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;user-select:none;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            .box{
+                position: relative;
+                width:500px;
+                height:300px;
+                margin: 20px auto 0;
+                border: 1px solid #cc3366;
+            }
+            .box .con{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 270px;
+            }
+            .con ul,.con ul li{
+                position: absolute;
+                z-index: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .con ul li.active{
+                z-index: 1;
+            }
+            .con ul li:nth-child(1){
+                background-color: red;
+            }
+            .con ul li:nth-child(2){
+                background-color: blue;
+            }
+            .con ul li:nth-child(3){
+                background-color: yellow;
+            }
+            .box .tab{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 30px;
+            }
+            .tab li{
+                float: left;
+                height: 100%;
+                width: 33.33%;
+                background-color: royalblue;
+                font-size: 24px;
+                font-weight: bolder;
+                line-height: 30px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .tab li.active{
+                background-color: red;
+            }
+            .tab ul{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="con">
+                <ul>
+                    <li class="active">A内容</li>
+                    <li>B内容</li>
+                    <li>C内容</li>
+                </ul>
+            </div>
+            <div class="tab">
+                <ul>
+                    <li class="active">A</li>
+                    <li>B</li>
+                    <li>C</li>
+                </ul>
+            </div>
+        </div>
+        
+        <script>
+            (function () {
+                //构造点击切换的函数
+                function Switchover(parent) {
+                    this.con=parent.con;
+                    this.tab=parent.tab;
+                    this.classCon=parent.classCon||"active"; //作为存储样式
+                    this.classTab=parent.classTab||"active";
+                    //当作局部 私有属性
+                    this.index=0;
+                    this.length=this.tab.length;
+                    this.exe();
+                }
+                //原型上公有事件
+                Switchover.prototype={
+                    constructor:Switchover,
+                    //添加事件
+                    exe : function(){
+                        this.addClick();
+                    },
+                    //监听事件
+                    addClick:function(){
+                        for(var i=0;i<this.length;i++){
+                            (function (i) {//闭包的需要 观察this指向
+                                this.tab[i].onclick=function () {
+                                    this.change(i);
+                                }.bind(this);//点击被动改变this指向
+                            }).call(this,i);
+                        }
+                    },
+                    //变化的量
+                    change:function(i){
+                        this.con[this.index].classList.remove(this.classCon);
+                        this.tab[this.index].classList.remove(this.classTab);
+                        this.index=i;
+                        this.con[this.index].classList.add(this.classCon);
+                        this.tab[this.index].classList.add(this.classTab);
+                    }
+                }
+                //实力测试
+                new Switchover({//结构赋值
+                    con:document.querySelectorAll(".box .con li"),
+                    tab:document.querySelectorAll(".box .tab li")
+                })
+            })()
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

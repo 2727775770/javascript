@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .box{
+                width:100px;
+                height: 100px;
+                background-color: #cc3366;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+
+        </div>
+        
+        <script>
+            var oBox=document.querySelector(".box");
+
+            var fn=addEvent(oBox,'click',function () {
+                this.style.background='red';
+            });
+
+
+
+
+
+
+
+            //双击事件
+            addEvent(document,"dblclick",function () {
+                removeEvent(oBox,"click",fn);
+            })
+
+            //事件监听的兼容
+            function  addEvent(ele,eType,callback,capture) {
+                //主流浏览器
+                if(ele.addEventListener){
+                    //判断是否为火狐
+                    if(eType==="mousewheel"&&document.createElement("div").onmousewheel===undefined){
+                        eType="DOMMouseScroll";
+                    }
+                    ele.addEventListener(eType,callback,capture);
+
+                    return callback;
+                }else{
+                    //处理this指向问题
+                    var codeCall=function(){
+                      callback.call(ele);
+                    };
+                    ele.attachEvent("on"+eType,codeCall);
+                    return codeCall;
+                }
+            }
+            //移除时间
+            function removeEvent(ele,eType,callback,capture) {
+                ele.removeEventListener?
+                    ele.removeEventListener(eType,callback,capture)
+                   :ele.detachEvent("on"+eType,capture);
+            }
+
+            // 一次性事件
+            // function oneEvent(ele,eType,callback,capture) {
+            //     var fn=addEvent(oBox,eType,function (e) {
+            //         callback.call(ele,e);
+            //         removeEvent(this,"click",fn);
+            //     });
+            // }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

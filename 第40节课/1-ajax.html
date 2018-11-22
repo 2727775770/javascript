@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="http://moonbuy.cn/mall/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+    <script>
+        //  创建 ajax对象
+        const ajax = new XMLHttpRequest();
+        // 监听状态的改变
+        /*
+        *     0~4
+        *       0  初始化状态  ajax对象已经被创建
+        *       1   open()方法 已调用
+        *       2   send()方法 已调用
+        *       3   所有的响应 已经收到
+        *       4   http 响应已经完全接收
+        * */
+        ajax.onreadystatechange = function (){
+            if( ajax.readyState === 4 && ajax.status === 200 ){
+                // 前端 就能够接收到 数据了 想干嘛就干嘛
+                // 把对应的数据 转换对应的数据类型
+                // console.log( ajax.response )
+                // console.log( JSON.parse(ajax.response) )
+                console.log( ajax.response )
+            }
+        }
+        // 路径不能出现中文
+        // 本地测试
+        // ajax.open('post','./data.php',true); // 通过什么样的方式，向什么样的后端服务器 发送什么的请求, true异步
+
+        // 真实服务器（虚拟主机）环境   数据先行 数据驱动视图  我课程三 H5的实战的数据 都是在真实的服务器里面 我会提供数据接口给大家
+        // 前端 和 真实的php服务器 交互
+        // ajax.open('post','http://www.tanzhouweb.com/48/data.php',true);
+        // ajax.open('post','http://www.tanzhouweb.com/taobao/tbData.php?title=category',true);
+        // ajax.open('get','http://47.100.98.54:9019/api/shoplist',true);
+
+        // ajax.open('get','http://127.0.0.1:6060',true);
+
+        // 前端 和 真实的node服务器 交互
+        // ajax.open('get','http://47.100.98.54:6060',true);
+        // ajax.open('get','http://47.100.98.54:6061',true);
+        // ajax.open('get','http://47.100.98.54:6062',true);
+        ajax.open('get','http://127.0.0.1:6062',true);
+        ajax.send() // 执行请求命令
+
+        // 你们把课件下载 下来  想运行 node服务器（http.js express.js koa.js ）
+        // 就需要提前下载好项目依赖  运行  npm i
+        // node http.js
+    </script>
+</body>
+</html>

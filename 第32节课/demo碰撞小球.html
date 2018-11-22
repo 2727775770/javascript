@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .box{
+                position: relative;
+            }
+            .box p{
+                position: absolute;
+                left:100px;
+                top:100px;
+                width: 100px;
+                height: 100px;
+                background-image: radial-gradient(#fff,darkgreen);
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <!--<p></p>-->
+        </div>
+        
+        <script>
+            (function () {
+                let oBox=document.querySelector(".box");
+                //生产10个小球
+                (function () {
+                    let oF=document.createDocumentFragment();
+                    for(let i=0;i<10;i++){
+                        let oP=document.createElement("p");
+                        oF.appendChild(oP);
+                        console.log(i);
+                    }
+                    oBox.appendChild(oF);
+                })();
+
+                (function () {
+                    //获取每个小球
+                    let aP=[...document.querySelectorAll(".box p")];
+                    //用数组存储对象的属性值
+                    let step=[];
+                    //设置每个小球的属性速度值随机变化量
+                    aP.forEach((ele,index)=>{
+                        let s=10-index;
+                        step[index]={
+                            stepX:s,
+                            stepY:s
+                            // stepX:Math.floor(Math.random()*13+2);
+                            // stepY:Math.floor(Math.random()*13+2);
+                        };
+                    });
+                    //获取极限
+                    let maxleft,maxTop;
+                    window.onresize=function r() {
+                        maxleft=window.innerWidth-100;
+                        maxTop=window.innerHeight-100;
+                        return r;
+                    }();
+                    //运动变化
+                    !function m() {
+                        //每个小球的获值
+                        aP.forEach((ele,index)=>{
+                            //设置变化量 球的定位加变化量
+                            let gLeft=ele.offsetLeft+step[index].stepX;
+                            let gTop=ele.offsetTop+step[index].stepY;
+                            if(gLeft>=maxleft){
+                                gLeft=maxleft;
+                                step[index].stepX=-step[index].stepX;
+                                createcolor(ele);
+                            }
+                            if(gLeft<=0){
+                                gLeft=0;
+                                step[index].stepX=-step[index].stepX;
+                                createcolor(ele);
+                            }
+                            if(gTop>=maxTop){
+                                gTop=maxTop;
+                                step[index].stepY=-step[index].stepY;
+                                createcolor(ele);
+                            }
+                            if(gTop<=0){
+                                gTop=0;
+                                step[index].stepY=-step[index].stepY;
+                                createcolor(ele);
+                            }
+                            ele.style.left=gLeft+"px";
+                            ele.style.top=gTop+"px";
+                        });
+                        requestAnimationFrame(m);
+                    }();
+                })()
+                //随机颜色
+                function createcolor(ele){
+                    let [r,g,b]=[
+                        Math.floor(Math.random()*256),
+                        Math.floor(Math.random()*256),
+                        Math.floor(Math.random()*256)
+                    ]
+                    ele.style.backgroundImage=`radial-gradient(#fff,rgb(${r},${g},${b}))`
+                }
+            })();
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                position: relative;
+                top: 200px;
+                left: 500px;
+                width:100px;
+                height: 100px;
+                background-color: yellow;
+                user-select: none;
+            }
+            .resize{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+            .resize div{
+                position: absolute;
+                width:100%;
+                height:100%;
+            }
+            .resize .e{
+                right:0;
+                top:0;
+                width:5px;
+                background-color: #55a532;
+                cursor: e-resize;
+            }
+            .resize .s{
+                left:0;
+                bottom: 0;
+                height:5px;
+                background-color: #55a532;
+                cursor: s-resize;
+            }
+            .resize .w{
+                left:0;
+                top:0;
+                width:5px;
+                background-color: #55a532;
+                cursor: w-resize;
+            }
+            .resize .n{
+                left:0;
+                top:0;
+                height:5px;
+                background-color: #55a532;
+                cursor: n-resize;
+            }
+            .resize .se,
+            .resize .sw,
+            .resize .nw,
+            .resize .ne{
+                height: 5px;
+                width: 5px;
+                background-color: red;
+            }
+            .resize .se{
+                right: 0;
+                bottom: 0;
+                cursor: se-resize;
+            }
+            .resize .sw{
+                left: 0;
+                bottom: 0;
+                cursor: sw-resize;
+            }
+            .resize .nw{
+                left: 0;
+                top: 0;
+                cursor: nw-resize;
+            }
+            .resize .ne{
+                right: 0;
+                top: 0;
+                cursor: ne-resize;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="resize">
+                <div class="e"></div>
+                <div class="s"></div>
+                <div class="w"></div>
+                <div class="n"></div>
+                <div class="se"></div>
+                <div class="sw"></div>
+                <div class="nw"></div>
+                <div class="ne"></div>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                let oWrap=document.querySelector("#wrap"),
+                    aResize=[...document.querySelectorAll("#wrap .resize div")]
+                ;
+
+                //按钮事件
+                aResize.forEach((ele,index)=>{
+                    //鼠标按钮下
+                    ele.onmousedown=(ele)=>{
+                        //获取盒子  长宽
+                        let Width=parseFloat(getComputedStyle(oWrap).width);
+                        let Height=parseFloat(getComputedStyle(oWrap).height);
+
+                        //获取按下盒子 定位高度和宽度
+                        let sTop = oWrap.offsetTop;
+                        let sLeft = oWrap.offsetLeft;
+
+                        //获取极限值 定位left和top
+                        let minleft=sLeft+oWrap.offsetWidth-10;
+                        let mintop=sTop+oWrap.offsetHeight-10;
+
+                        //获取按下鼠标位置的
+                        let Sx=ele.clientX;
+                        let Sy=ele.clientY;
+
+                        document.onmousemove=(ele)=>{
+                            //存放变化的宽，高，定位高，定位左
+                            let w,h,t,l;
+                            //获取当前鼠标位置
+                            let nowx=ele.clientX;
+                            let nowy=ele.clientY;
+                            //鼠标变化量
+                            let x=nowx-Sx;
+                            let y=nowy-Sy;
+                            switch(index){
+                                    case 0:
+                                        w=Width+x;
+                                        break;
+                                    case 1:
+                                        h=Height+y;
+                                        break;
+                                    case 2:
+                                        l=sLeft+x;
+                                        w=Width-x;
+                                        break;
+                                    case 3:
+                                        t= sTop+y;
+                                        h=Height-y;
+                                        break;
+                                    case 4:
+                                        w=Width+x;
+                                        h=Height+y;
+                                        break;
+                                    case 5:
+                                        h=Height+y;
+                                        l=sLeft+x;
+                                        w=Width-x;
+                                        break;
+                                    case 6:
+                                        l=sLeft+x;
+                                        w=Width-x;
+                                        t= sTop+y;
+                                        h=Height-y;
+                                        break;
+                                    case 7:
+                                        t= sTop+y;
+                                        h=Height-y;
+                                        w=Width+x;
+                                        break;
+                                }
+                            oWrap.style.width=Math.max(w,10)+'px';
+                            oWrap.style.height=Math.max(h,10)+'px';
+                            oWrap.style.left=Math.min(l,minleft)+'px';
+                            oWrap.style.top=Math.min(t,mintop)+'px';
+                       }
+                    }
+                })
+                //抬起事件
+                document.onmouseup=function () {
+                    this.onmousemove=null;//取消移动
+                }
+            })();
+            // //e
+            // if(index===0){
+            //     oWrap.style.width=Width+x+"px";
+            // }
+            // //s
+            // if(index===1){
+            //     oWrap.style.height=Height+y+"px";
+            // }
+            // //w
+            // if(index===2){
+            //     oWrap.style.left =sLeft+x+'px';
+            //     oWrap.style.width=Width-x+"px";
+            // }
+            // //n
+            // if(index===3){
+            //     //定位要随着鼠标变化而变化
+            //     oWrap.style.top = sTop+y+'px';
+            //     //高度随着鼠标变化而变化
+            //     oWrap.style.height=Height-y+"px";
+            // }
+
+            // switch(index){
+            //     case 0:
+            //         oWrap.style.width=Width+x+"px";
+            //         break;
+            //     case 1:
+            //         oWrap.style.height=Height+y+"px";
+            //         break;
+            //     case 2:
+            //         oWrap.style.left =sLeft+x+'px';
+            //         oWrap.style.width=Width-x+"px";
+            //         break;
+            //     case 3:
+            //         oWrap.style.top = sTop+y+'px';
+            //         oWrap.style.height=Height-y+"px";
+            //         break;
+            //     case 4:
+            //         oWrap.style.width=Width+x+"px";
+            //         oWrap.style.height=Height+y+"px";
+            //         break;
+            //     case 5:
+            //         oWrap.style.height=Height+y+"px";
+            //         oWrap.style.left =sLeft+x+'px';
+            //         oWrap.style.width=Width-x+"px";
+            //         break;
+            //     case 6:
+            //         oWrap.style.left =sLeft+x+'px';
+            //         oWrap.style.width=Width-x+"px";
+            //         oWrap.style.top = sTop+y+'px';
+            //         oWrap.style.height=Height-y+"px";
+            //         break;
+            //     case 7:
+            //         oWrap.style.top = sTop+y+'px';
+            //         oWrap.style.height=Height-y+"px";
+            //         oWrap.style.width=Width+x+"px";
+            //         break;
+            // }
+            // //极限获取   一定搞清楚 到底是最大值还是最小值的极限
+            // oWrap.style.width=Math.max(parseFloat(oWrap.style.width),10)+'px';
+            // oWrap.style.height=Math.max(parseFloat(oWrap.style.height),10)+'px';
+            // oWrap.style.left=Math.min(parseFloat(oWrap.style.left),minleft)+'px';
+            // oWrap.style.top=Math.min(parseFloat(oWrap.style.top),mintop)+'px';
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

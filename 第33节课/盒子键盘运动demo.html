@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .box{
+                position: relative;
+                left: 500px;
+                top: 300px;
+                width:100px;
+                height:100px;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        
+        <script>
+            (function () {
+                let oBox=document.querySelector(".box");
+
+                let evdown={
+                    37:{
+                        bool:false,
+                        timer:null,
+                        settimer:function () {
+                            oBox.style.left=oBox.offsetLeft-1+"px";
+                            this.timer=requestAnimationFrame(this.settimer.bind(this));
+                        },
+                        cleartimer:function () {
+                            cancelAnimationFrame(this.timer);
+                        }
+                    },
+                    38:{
+                        bool:false,
+                        timer:null,
+                        settimer:function () {
+                            oBox.style.top=oBox.offsetTop-1+"px";
+                            this.timer=requestAnimationFrame(this.settimer.bind(this));
+                        },
+                        cleartimer:function () {
+                            cancelAnimationFrame(this.timer);
+                        }
+                    },
+                    39:{
+                        bool:false,
+                        timer:null,
+                        settimer:function () {
+                            oBox.style.left=oBox.offsetLeft+1+"px";
+                            this.timer=requestAnimationFrame(this.settimer.bind(this));
+                        },
+                        cleartimer:function () {
+                            cancelAnimationFrame(this.timer);
+                        }
+                    },
+                    40:{
+                        bool:false,
+                        timer:null,
+                        settimer:function () {
+                            oBox.style.top=oBox.offsetTop+1+"px";
+                            this.timer=requestAnimationFrame(this.settimer.bind(this));
+                        },
+                        cleartimer:function () {
+                            cancelAnimationFrame(this.timer);
+                        }
+                    },
+                }
+                document.onkeydown=function (ev) {
+                    //存储按下键盘值
+                    let keycode=ev.keyCode;
+                    if(!evdown[keycode])return;
+                    evdown[keycode].bool||evdown[keycode].settimer();
+                    evdown[keycode].bool=true;
+                }
+                document.onkeyup=function (ev) {
+                    let keycode=ev.keyCode;
+                    if(!evdown[keycode])return;
+                    evdown[keycode].cleartimer();
+                    evdown[keycode].bool=false;
+                }
+            })();
+            // switch (keycode) {
+            //     case 37:
+            //         oBox.style.left=oBox.offsetLeft-1+"px";
+            //         break;
+            //     case 38:
+            //         oBox.style.top=oBox.offsetTop-1+"px";
+            //         break;
+            //     case 39:
+            //         oBox.style.left=oBox.offsetLeft+1+"px";
+            //         break;
+            //     case 40:
+            //         oBox.style.top=oBox.offsetTop+1+"px";
+            //         break;
+            // }
+            // let bool={};//判断是否存在动画 多值存储用{}
+            //
+            // document.onkeydown=function (ev) {
+            //     let keycode=ev.keyCode;
+            //
+            //     switch (keycode) {
+            //         case 37:
+            //             bool[keycode] || moveleft();
+            //             break;
+            //         case 38:
+            //             bool[keycode] || movetop();
+            //             break;
+            //         case 39:
+            //             bool[keycode] || moveright();
+            //             break;
+            //         case 40:
+            //             bool[keycode] || movebottom();
+            //             break;
+            //     }
+            //     bool[keycode]=true;
+            // }
+            // document.onkeyup=function (ev) {
+            //     let keycode=ev.keyCode;
+            // }
+            //
+            // function moveleft() {
+            //     !function m() {
+            //         oBox.style.left=oBox.offsetLeft-1+"px";
+            //         requestAnimationFrame(m);
+            //     }();
+            // }
+            // function movetop() {
+            //     !function m() {
+            //         oBox.style.top=oBox.offsetTop-1+"px";
+            //         requestAnimationFrame(m);
+            //     }();
+            // }
+            // function moveright() {
+            //     !function m() {
+            //         oBox.style.left=oBox.offsetLeft+1+"px";
+            //         requestAnimationFrame(m);
+            //     }();
+            // }
+            // function movebottom() {
+            //     !function m() {
+            //         oBox.style.top=oBox.offsetTop+1+"px";
+            //         requestAnimationFrame(m);
+            //     }();
+            // }
+
+
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .circle{
+                position: relative;
+                width:238px;
+                height:238px;
+                margin:30px auto ;
+                border:1px solid blue;
+                border-radius: 50%;
+            }
+            .circle p{
+                position: absolute;
+                right:0;
+                bottom:0;
+                top:0;
+                left:0;
+                margin: auto;
+                width:0;
+                height: 100%;
+                background-color: fuchsia;
+                animation: run 5s linear infinite;
+            }
+            .circle span{
+                position: absolute;
+                top:-4px;
+                left:0;
+                width:8px;
+                height:8px;
+                background-color: red;
+                border-radius: 50%;
+            }
+            @keyframes run {
+                form{
+                    transform: rotate(0deg);
+                }to{
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle">
+            <p>
+                <span></span>
+            </p>
+        </div>
+        
+        <script>
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

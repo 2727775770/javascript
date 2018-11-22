@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            #wrap{
+                /*注意这里拖拽盒子不能使用margin*/
+                position: relative;
+                top:200px;
+                left:600px;
+                width:100px;
+                height:100px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+        
+        <script>
+            let oWrap=document.querySelector("#wrap");
+            
+            //按下事件
+            oWrap.onmousedown=function (ele) {
+                //获取当前按下鼠标位置
+                let Sx=ele.clientX;
+                let Sy=ele.clientY;
+                //获取盒子定位
+                let offx=oWrap.offsetLeft;
+                let offy=oWrap.offsetTop;
+
+                //经过事件
+                document.onmousemove=function (ele) {
+                    //时刻获取当前的鼠标位置
+                    let nowX=ele.clientX;
+                    let nowY=ele.clientY;
+                    let x=nowX-Sx;
+                    let y=nowY-Sy;
+                    //盒子定位位置=当前位置-按下位置+初始定位位置
+                    console.log(y);
+                    oWrap.style.left=x+offx+"px";
+                    oWrap.style.top=y+offy+"px";
+                }
+            }
+            //清除经过事件
+            document.onmouseup=function () {
+                document.onmousemove=null;
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

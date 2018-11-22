@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            .time{
+                overflow: hidden;
+                width:150px;
+                height:30px;
+                margin: 50px auto 0;
+            }
+            .time p{
+                position: relative;
+                top:0;
+                float: left;
+                width: 20px;
+                height:30px;
+            }
+            .time p.tran{
+                top:-100%;
+                transition: 0.3s;
+            }
+            .time p span{
+                display:block;
+                width: 20px;
+                height:30px;
+                background-image: linear-gradient(to top,red 0%,blue 50%,yellow 100%);
+                border-radius: 5px;
+                line-height: 30px;
+                text-align: center;
+            }
+            .time p:first-child{
+                margin-left: 4px;
+            }
+            .time>span{
+                float: left;
+                width: 10px;
+                line-height: 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="time">
+            <p>
+                <span class="first">0</span>
+                <span class="second">0</span>
+            </p>
+            <p>
+                <span class="first">0</span>
+                <span class="second">0</span>
+            </p>
+            <span>:</span>
+            <p>
+                <span class="first">0</span>
+                <span class="second">0</span>
+            </p>
+            <p>
+                <span class="first">0</span>
+                <span class="second">0</span>
+            </p>
+            <span>:</span>
+            <p>
+                <span class="first">0</span>
+                <span class="second">0</span>
+            </p>
+            <p>
+                <span class="first">0</span>
+                <span class="second">0</span>
+            </p>
+        </div>
+        <script>
+            (function () {
+                let aP=[...document.querySelectorAll(".time p")],
+                    aFirst=[...document.querySelectorAll(".time .first")],
+                    aSecond=[...document.querySelectorAll(".time .second")];
+
+                let lasttime=[];
+
+                //返回时间函数
+                function timer(){
+                    let newTime=new Date(),
+                        HH=newTime.getHours(),
+                        MM=newTime.getMinutes(),
+                        SS=newTime.getSeconds();
+                    HH= HH<10?"0"+HH:HH+"";
+                    MM= MM<10?"0"+MM:MM+"";
+                    SS= SS<10?"0"+SS:SS+"";
+                    return [...HH,...MM,...SS];//返回值变成了数组
+                }
+
+                function fn(){
+                    let d=timer();//变量存储函数返回值
+                        lasttime=d;//用变量存储前一秒的值
+                    aFirst.forEach((node,index)=>{
+                        //每个第一个span的内容给时间函数的值一次赋值
+                        node.innerHTML=d[index];
+                    });
+                    //返回存放到第2个span的时间
+                    //前一秒内容值与后一秒内容值进行比对取改变值
+                    return function () {
+                        let d=timer();//后一秒的内容值
+                        d.forEach((node,index)=>{
+                            //前一秒内容值与后一秒内容相同跳出
+                            if(node===lasttime[index])return;
+                            //前一秒内容值与后一秒内容不相同给后一秒的内容填充
+                            aSecond[index].innerHTML=d[index];
+                            //2位置取代1
+                            aP[index].classList.add("tran");
+                            setTimeout(()=>{
+                                aFirst[index].innerHTML=d[index];
+                                aP[index].classList.remove("tran");
+                            },300)
+                        })
+                        lasttime=d;
+                    }
+                }
+                //计时器
+                setInterval(fn(),1000);
+                //fn是函数，那就是循环函数，fn()是函数自执行，有返回值的，所以是循环其返回值
+            })();
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

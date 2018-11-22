@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            .shaking-number{
+                width:270px;
+                height:260px;
+                padding-top: 10px;
+                margin:150px auto 0;
+                border:1px solid #55a532;
+                user-select: none;
+            }
+            .shaking-number .title{
+                color:red;
+                font-size:25px;
+                text-align:center;
+            }
+            .content p{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color:yellow;
+                text-align:center;
+            }
+            .content{
+                width:100px;
+                height:150px;
+                margin-left: 33%;
+            }
+            .content li{
+                margin-bottom: 5px;
+            }
+            .shaking-number .luck-draw{
+                width:100px;
+                height:60px;
+                background-color: paleturquoise;
+                border-radius: 5px;
+                color:red;
+                font-weight: bold;
+                text-align:center;
+                line-height: 60px;
+                cursor: pointer;
+            }
+            .luck-draw,.result{
+                float:left;
+            }
+            .result{
+                line-height: 60px;
+                text-indent: 20px;
+            }
+            .result span{
+                color:fuchsia;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="shaking-number">
+            <h3 class="title">黑心摇号</h3>
+
+            <ul class="content">
+                <p>奖励机制</p>
+                <li>一等奖2%</li>
+                <li>二等奖10%</li>
+                <li>三等奖30%</li>
+                <li>谢谢参与</li>
+            </ul>
+            <div class="luck-draw" >我要抽奖</div>
+            <p class="result">结果为：<span></span></p>
+        </div>
+        
+        <script>
+            (function (data) {
+                let oBtn=document.querySelector(".shaking-number .luck-draw"),
+                    oSpan=document.querySelector(".result span");
+                let html;//结果的值
+                //n+1到m的随机数
+                function rdm(n,m) {
+                    return Math.ceil((m-n)*Math.random()+n);
+                }
+                oBtn.onclick=function () {//触发事件
+                    let a = rdm(0,100); //防止随机数变化，不是同一个
+                    // console.log(a);
+                    if(a<=2&&a>0){
+                        html=data[0].html;
+                    }else if(a<=12&&a>2){
+                        html=data[1].html;
+                    }else if(a<=42&&a>12){
+                        html=data[2].html;
+                    }else{
+                        html=data[3].html;
+                    }
+                    // console.log(html);
+                    oSpan.innerHTML=html;
+                }
+            })(
+                //假设后台的数据
+                [
+                    {
+                        html:"一等奖"
+                    },
+                    {
+                        html:"二等奖"
+                    },
+                    {
+                        html:"三等奖"
+                    },
+                    {
+                        html:"谢谢参与"
+                    },
+                ]
+            )
+
+
+
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

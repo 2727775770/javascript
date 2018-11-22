@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .circle{
+                position: relative;
+                width:240px;
+                height:240px;
+                margin:30px auto ;
+                border:1px solid blue;
+                border-radius: 50%;
+            }
+            .circle p{
+                position: absolute;
+                right:0;
+                bottom:0;
+                top:0;
+                left:0;
+                margin: auto;
+                width:0;
+                height: 100%;
+                background-color: fuchsia;
+            }
+            .circle span{
+                position: absolute;
+                top:-4px;
+                left:0;
+                width:8px;
+                height:8px;
+                background-color: red;
+                border-radius: 50%;
+            }
+            .circle .shadow{
+                position: absolute;
+                left:0;
+                top:0;
+                width:238px;
+                height:238px;
+                border:1px solid red;
+                border-radius: 50%;
+            }
+            .shadow span{
+                width:8px;
+                height:8px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle">
+            <p>
+                <span></span>
+            </p>
+            <div class="shadow"></div>
+        </div>
+        
+        <script>
+            (function () {
+                let shadow = document.querySelector(".shadow"),
+                    oSpan=document.querySelector(".circle span"),
+                    rag=0,
+                    r=120,
+                    html="";
+                function randomcolor(){
+                    let [r,g,b]=[
+                        Math.floor(Math.random()*256),
+                        Math.floor(Math.random()*256),
+                        Math.floor(Math.random()*256)
+                    ]
+                    return `rgb(${r},${g},${b})`
+                }
+                //三角函数构坐标
+                function n() {
+                    rag++;
+                    r -=0.1;
+                    let angle=rag/360 *2* Math.PI,
+                        x=r* Math.sin(angle),
+                        y=r* Math.cos(angle),
+                        left=x-4,
+                        top=120-y-4;
+                    oSpan.style.left=left+"px";
+                    oSpan.style.top=top+"px";
+
+                    html+=`<span style="background-color: ${randomcolor()};left: ${left+120}px;top:${top+0}px"></span>`;
+                    shadow.innerHTML=html;
+                    requestAnimationFrame(n);
+                };
+                requestAnimationFrame(n);
+
+
+            })();
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

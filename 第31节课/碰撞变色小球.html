@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述">
+    <meta name="author" content="潭州教育-阿飞老师">
+    <style>
+        body{font-family: "Microsoft YaHei",serif;}
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+
+        .ball{
+            position: absolute;
+            z-index: 1;
+            left:200px;
+            top:200px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        /*.shadow{*/
+            /*position: absolute;*/
+            /*top:0;*/
+            /*left: 0;*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+        /*}*/
+        /*.shadow span{*/
+            /*position: absolute;*/
+            /*width: 50px;*/
+            /*height: 50px;*/
+            /*background-image: linear-gradient(to bottom,#8cc1dd 0%, #f8a886 100%);*/
+            /*border-radius: 50%;*/
+            /*transform: scale(1);*/
+            /*opacity: 1;*/
+            /*transform-origin: center center;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <script>
+
+
+        (function () {
+            //获取节点
+            let aBall=[...document.querySelectorAll(".ball")];
+
+            //小球变化量
+            let stepX = [3,4,5,6,7,8,9,10],
+                stepY = [6,8,10,12,14,16,18,20];
+
+            let maxY, maxX;//获取可视区的大小
+            //随机颜色
+            function createColor() {
+                let r=Math.floor(Math.random()*256),
+                    g=Math.floor(Math.random()*256),
+                    b=Math.floor(Math.random()*256);
+                return `rgb(${r},${g},${b})`;
+            }
+
+            aBall.forEach((ele,index)=>{
+                //窗口
+                window.onresize=(function size(){
+                    maxX=window.innerWidth-aBall[index].offsetWidth;
+                    maxY=window.innerHeight-aBall[index].offsetHeight;
+                    return size;
+                })();
+
+                function move() {
+                    // 获取每个小球当前的当前定位信息
+                    let x=aBall[index].offsetLeft;
+                    let y=aBall[index].offsetTop;
+
+                    // 每个小球的变化量
+                    x +=stepX[index];
+                    y +=stepY[index];
+                    //碰撞改变方向
+                    if(y>=maxY){
+                        y=maxY;
+                        stepY[index] = -stepY[index];
+                        let color=createColor();
+                        aBall[index].style.backgroundColor=color;
+                    }
+                    if(y<=0){
+                        y=0;
+                        stepY[index] = -stepY[index];
+                        let color=createColor();
+                        aBall[index].style.backgroundColor=color;
+                    }
+                    if(x>=maxX){
+                        x=maxX;
+                        stepX[index]=-stepX[index];
+                        let color=createColor();
+                        aBall[index].style.backgroundColor=color;
+                    }
+                    if(x<=0){
+                        x=0;
+                        stepX[index]=-stepX[index];
+                        let color=createColor();
+                        aBall[index].style.backgroundColor=color;
+                    }
+                    aBall[index].style.left=x+"px";
+                    aBall[index].style.top=y+"px";
+
+                    requestAnimationFrame(move);
+                }
+                requestAnimationFrame(move);
+            })
+
+        })();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .box{
+                width:320px;
+                padding:30px 0 30px 30px;
+                margin:50px auto 0;
+                border:1px solid #ecc06c;
+                text-align: center;
+                user-select: none;
+            }
+            input[type="button"]{
+                margin-left:110px;
+                margin-bottom:10px;
+            }
+            .box p{
+                color: red;
+            }
+            .box .result{
+                text-indent: 45px;
+            }
+            .box p,.box input[type="text"]{
+                float: left;
+                margin: 10px 0;
+            }
+            .clearfixed::after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            input[type="button"]{
+                display: block;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box clearfixed">
+            <p> 请输入你的数：</p><input class="text" type="text" placeholder="请输入小数"/>
+            <input class="btn" type="button" value="向上取整"/>
+            <input class="btn" type="button" value="向下取整"/>
+            <input class="btn" type="button" value="四舍五入"/>
+            <input class="btn" type="button" value="去掉小数点"/>
+            <p class="result">结果为：</p><input class="text" type="text"/>
+        </div>
+        
+        <script>
+            let aBtn=document.querySelectorAll(".box .btn"),
+                aText=document.querySelectorAll(".box .text"),
+                val;//作为初始的输入的值
+            [...aBtn].forEach(function (node,index) {
+                node.onclick=function () {
+                    let api="";//数组属性
+                    val=aText[0].value;
+                    switch (index) {
+                        case 0:
+                            api="ceil";
+                            break;
+                        case 1:
+                            api="floor";
+                            break;
+                        case 2:
+                            api="round";
+                            break;
+                        case 3:
+                            api="trunc";
+                            break;
+                    }
+                    val=Math[api](val);
+                    aText[1].value=val;
+                }
+            })
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

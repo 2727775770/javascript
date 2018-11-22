@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .box{
+                position:relative;
+                width:520px;
+                height:280px;
+                margin:50px auto 0;
+                border:1px solid #f50;
+                user-select: none;
+            }
+            .box .content{
+                overflow: hidden;
+                position: absolute;
+                width:100%;
+                height:100%;
+            }
+            .content .banner{
+                position: absolute;
+                top:0;
+                left:-100%;
+                width:1000%;
+                height: 100%;
+                transition: left .5s;
+            }
+            .content .banner.active{
+                transition: left 0s;
+            }
+            .banner li{
+                float:left;
+                width:10%;
+                height:100%;
+            }
+            .box .lable{
+                position: absolute;
+                width: 100%;
+                height:100%;
+            }
+            .box .lable .arrow-left,
+            .box .lable .arrow-right{
+                position: absolute;
+                top:0;
+                bottom:0;
+                margin:auto;
+                width:23px;
+                height:33px;
+                background-color: black;
+                color:white;
+                font-size:23px;
+                font-weight: bold;
+                text-align: center;
+                line-height:29px;
+                cursor: pointer;
+                opacity: 0.5;
+            }
+            .box .lable .arrow-left{
+                border-radius: 0 100px 100px 0;
+                left:0;
+            }
+            .box .lable .arrow-right{
+                border-radius: 100px 0 0 100px;
+                right:0;
+            }
+            .lable .btn{
+                position: absolute;
+                bottom:23px;
+                right:0;
+                left:0;
+                margin:auto;
+                width:75px;
+                height: 16px;
+            }
+            .lable .btn .btn-list{
+                position: absolute;
+                width:100%;
+                height: 100%;
+                border-radius: 10px;
+                background-color: #d3d8de;
+            }
+            .btn .btn-list li{
+                float: left;
+                width:10px;
+                height:10px;
+                margin-top:3px;
+                margin-left:4px;
+                border-radius: 50%;
+                background-color: white;
+                opacity:1;
+                cursor: pointer;
+            }
+            .btn .btn-list li:first-child{
+                margin-left:6px;
+            }
+            .btn .btn-list li.active{
+                background-color:#ff5000;
+            }
+            .clearfixed::after{
+                content:'';
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="content">
+                <ul class="banner clearfixed">
+                    <li><img src="img/5.webp" height="280" width="520" alt=""/></li>
+                    <li><img src="img/1.jpg" height="280" width="520" alt=""/></li>
+                    <li><img src="img/2.jpg" height="280" width="520" alt=""/></li>
+                    <li><img src="img/3.jpg" height="280" width="520" alt=""/></li>
+                    <li><img src="img/4.jpg" height="280" width="520" alt=""/></li>
+                    <li><img src="img/5.webp" height="280" width="520" alt=""/></li>
+                    <li><img src="img/1.jpg" height="280" width="520" alt=""/></li>
+                </ul>
+            </div>
+            <div class="lable">
+                <div class="arrow-left"> < </div>
+                <div class="arrow-right"> > </div>
+                <div class="btn">
+                    <ul class="btn-list clearfixed">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                //设置变量
+                let oBox=document.querySelector(".box"),
+                    oBanner=document.querySelector(".content .banner "),
+                    aBtnLi=document.querySelectorAll(".lable .btn-list li"),
+                    oArrowLeft=document.querySelector(".arrow-left"),
+                    oArrowRight=document.querySelector(".arrow-right");
+
+                let color=0,//初始颜色位置
+                    len=aBtnLi.length,//下面按钮的长度5
+                    timer;//计数器
+
+                //改变变化的样式函数
+                function change(x) {
+                    //删除过渡跳过的样式
+                    oBanner.classList.remove("active");
+                    //图片的位置
+                    oBanner.style.left="-"+ (x+1)*100+"%";
+
+                    //处理x超出范围 图片位置
+                    if(x>len-1){
+                        x=0;
+                        //跳到第2个位置
+                        setTimeout(()=>{
+                            oBanner.classList.add("active");
+                            oBanner.style.left="-"+100+"%";
+                        },501);
+                    }else if(x<0){
+                        x=len-1;
+                        //跳到倒数第2个位置
+                        setTimeout(()=>{
+                            oBanner.classList.add("active");
+                            oBanner.style.left="-"+len*100+"%";
+                        },501);
+                    }
+
+                    //按钮颜色变化
+                    aBtnLi[color].classList.remove("active");
+                    aBtnLi[x].classList.add("active");
+                    color=x;
+
+                };
+                //设置底下所有按钮
+                [...aBtnLi].forEach((node,index)=>{
+                    //添加按钮事件
+                    node.onclick=function () {
+                        if(color==index)return;
+                        change(index);
+                    }
+                });
+                //设置右箭头点击事件
+                oArrowRight.onclick= ()=>{
+                    change(color+1);
+                };
+                //设置左箭头点击事件
+                oArrowLeft.onclick= ()=> {
+                    change(color-1);
+                };
+                //计时器
+                function auto() {
+                    timer=setInterval( ()=>{
+                        change(color+1);
+                    },2000)
+                };
+                auto();//自动播放
+                //停止播放
+                oBox.onmouseenter= ()=>{
+                    clearInterval(timer);
+                };
+                //重新播放
+                oBox.onmouseleave=auto;
+            })()
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

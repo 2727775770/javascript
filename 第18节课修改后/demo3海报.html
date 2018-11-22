@@ -1,0 +1,376 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            .container{
+                width:1080px;
+                height:370px;
+                padding-top: 10px;
+                margin:30px auto 0;
+                border:1px solid #993300;
+                user-select: none;
+            }
+            .container .top{
+                width: 100%;
+                height:40px;
+                background-color: #f5f5f5;
+                font-size:14px;
+                line-height: 40px;
+            }
+            .top .title,.top .list,.top .list li{
+                float: left;
+            }
+            .clearfixed::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .top .title{
+                position: relative;
+                width: 132px;
+                height: 100%;
+                background-color: #000;
+                color:white;
+                font-weight: bold;
+                text-align: center;
+            }
+            .top .title::after{
+                content: '';
+                position: absolute;
+                top:0;
+                right:-8px;
+                bottom:0;
+                margin: auto;
+                width: 0;
+                height:0;
+                border:8px solid transparent;
+                border-right-style: none;
+                border-left-color: #000;
+            }
+            .top .list{
+                margin-left: 40px;
+            }
+            .top .list li{
+                position: relative;
+                margin-right: 30px;
+                cursor: pointer;
+                transition:color 0.3s;
+            }
+            .top .list li.active{
+                color:#f00;
+            }
+            .top .list li::after{
+                content: '';
+                position: absolute;
+                bottom:0;
+                right:0;
+                left:0;
+                margin: auto;
+                width:0;
+                height:2px;
+                background-color: #f00;
+                transition: width 0.5s;
+            }
+            .top .list li.active::after{
+                width:100%;
+            }
+            .bottom{
+                width:100%;
+                height:300px;
+                margin-top:20px;
+            }
+            .bottom .box {
+                position: relative;
+                width: 100%;
+                height:100%;
+            }
+            .bottom .box>li{
+                position: absolute;
+                left:0;
+                top:0;
+                width: 100%;
+                height:100%;
+            }
+
+            .bottom .banner{
+                display: none;
+                width: 100%;
+                height:100%;
+            }
+            .bottom .banner.show{
+                display: block;
+            }
+            .bottom .banner li{
+                float: left;
+                width:340px;
+                height:100%;
+                margin-right: 20px;
+            }
+            .bottom .banner li img{
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+            }
+            .banner li p{
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                font-size: 14px;
+                line-height: 45px;
+                white-space: nowrap;
+                text-overflow:ellipsis;
+                cursor: pointer;
+                transition: color .3s;
+            }
+            .banner li p:hover{
+                color: #f00;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top clearfixed">
+                <p class="title">独家精品策划</p>
+                <ul class="list clearfixed">
+                    <!--<li>全部</li>-->
+                    <!--<li>全部全部</li>-->
+                    <!--<li>全部</li>-->
+                    <!--<li>全部</li>-->
+                    <!--<li>全部</li>-->
+                    <!--<li>全部</li>-->
+                </ul>
+            </div>
+            <div class="bottom">
+                <ul class="box">
+                    <li class="show">
+                        <ul class="banner show">
+                            <!--<li>-->
+                                <!--<img src="img/1.jpg" height="256" width="340"/>-->
+                                <!--<p>打发法法上法</p>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<img src="" alt="">-->
+                                <!--<p></p>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<img src="" alt="">-->
+                                <!--<p></p>-->
+                            <!--</li>-->
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="banner"></ul>
+                    </li>
+                    <li>
+                        <ul class="banner"></ul>
+                    </li>
+                    <li>
+                        <ul class="banner"></ul>
+                    </li>
+                    <li>
+                        <ul class="banner"></ul>
+                    </li>
+                    <li>
+                        <ul class="banner"></ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <script>
+            (function (data) {
+                let oUl=document.querySelector(".container .top .list"),
+                    aBanner=document.querySelectorAll(".bottom .box .banner"),
+                    len=data.length;
+
+                //生产top标题区域
+
+                (function () {
+                    let html="";
+                    for(let i=0;i<len;i++){
+                        if(data[i].title==undefined)break;
+                        html +=`<li>${data[i].title}</li>`;
+                        // if(data[i].title){
+                        //     html +=`<li>${data[i].title}</li>`;
+                        // }
+                    }
+                    oUl.innerHTML=html;
+                })();
+
+                //生产bottom区域内容
+                (function() {
+                    for(let i=0;i<len;i++){
+                        let thisDate=data[i];//让变量 储存每一个数组元素
+                        let {id,src,type,dec}=thisDate; //属性名获取数据
+                        aBanner[type].innerHTML+=`<li><img src="${src}" width="340" height="256" alt=""><p>${dec}</p></li>`;
+                        if(id<3){
+                            aBanner[0].innerHTML+=`<li><img src="${src}" width="340" height="256" alt=""><p>${dec}</p></li>`;
+                        }
+
+                        // switch (type) {
+                        //     case 1:
+                        //         aBanner[1].innerHTML +=`<li class><img src="${src}"><p>${dec}</p></li>`;
+                        //         break;
+                        //     case 2:
+                        //         aBanner[2].innerHTML +=`<li class><img src="${src}"><p>${dec}</p></li>`;
+                        //         break;
+                        //     case 3:
+                        //         aBanner[3].innerHTML +=`<li class><img src="${src}"><p>${dec}</p></li>`;
+                        //         break;
+                        //     case 4:
+                        //         aBanner[4].innerHTML +=`<li class><img src="${src}"><p>${dec}</p></li>`;
+                        //         break;
+                        //     case 5:
+                        //         aBanner[5].innerHTML +=`<li class><img src="${src}"><p>${dec}</p></li>`;
+                        //         break;
+                        // }
+                    }
+                })();
+
+                //经过上面发生变化
+                let aLi=document.querySelectorAll(".top .list li"),
+                    index=0,
+                    len1=aBanner.length;
+
+                (function () {
+                    for(let i=0;i<len1;i++){
+                        aLi[i].onmouseenter=function () {
+                            aLi[index].classList.remove("active");//上面文字变化
+                            aBanner[index].classList.remove("show");//下面图片变化
+                            aLi[i].classList.add("active");
+                            aBanner[i].classList.add("show");
+                            index=i;
+                        }
+                    }
+                })();
+                //全部字符串 添加样式
+                (function () {
+                    aLi[0].classList.add("active");
+                })();
+            })(
+                //假设后台传递的数据信息
+                [
+                    {
+                        id:0,
+                        src:"img/1.jpg",
+                        type:2,
+                        title: "全部",
+                        dec:"潮我看齐：罗志祥携手CTO男团"
+                    },
+                    {
+                        id:1,
+                        src:"img/2.jpg",
+                        type:1,
+                        title:"时装周",
+                        dec:"2019春夏巴黎时装周"
+                    },
+                    {
+                        id:2,
+                        src:"img/3.jpg",
+                        type:3,
+                        title:"潮我看齐",
+                        dec:"搭配速成班：宋轶亲身教你3种心机约会装！"
+                    },
+                    {
+                        id:3,
+                        src:"img/4.jpg",
+                        type:1,
+                        title:"搭配速成班",
+                        dec:"2019春夏米兰时装周"
+                    },
+                    {
+                        id:4,
+                        src:"img/5.jpg",
+                        type:1,
+                        title:"恋物趣",
+                        dec:"London2019"
+                    },
+                    {
+                        id:5,
+                        src:"img/6.jpg",
+                        type:2,
+                        title:"谁最有范",
+                        dec:"潮我看齐之马思纯，难道只用简单笑容就治愈了我？"
+                    },
+                    {
+                        id:6,
+                        src:"img/7.jpg",
+                        type:2,
+                        dec:"潮我看齐果汁女孩文咏珊"
+                    },
+                    {
+                        id:7,
+                        src:"img/8.jpg",
+                        type:3,
+                        dec:"搭配速成班:520恋爱系CP搭"
+                    },
+                    {
+                        id:8,
+                        src:"img/9.jpg",
+                        type:3,
+                        dec:"搭配速成班:文艺少女能量的荷兰之旅"
+                    },
+                    {
+                        id:9,
+                        src:"img/10.jpg",
+                        type:4,
+                        dec:"恋物趣vol.13:一把神奇\"信物\"，开启人生无限可能"
+                    },
+                    {
+                        id:10,
+                        src:"img/11.jpg",
+                        type:4,
+                        dec:"恋物趣vol.11:我陪你走过最浪漫的路就是爱情的套路"
+                    },
+                    {
+                        id:11,
+                        src:"img/12.jpg",
+                        type:4,
+                        dec:"恋物趣_ IWC万国表达文西女士腕表：女生们的时髦与品位全在这块腕表上！"
+                    },
+                    {
+                        id:12,
+                        src:"img/13.jpg",
+                        type:5,
+                        dec:"「谁最有范」之莫文蔚"
+                    },
+                    {
+                        id:13,
+                        src:"img/14.jpg",
+                        type:5,
+                        dec:"「谁最有范」之春夏，灵动之气的耿直girl"
+                    },
+                    {
+                        id:14,
+                        src:"img/15.jpg",
+                        type:5,
+                        dec:"「谁最有范」跟戚薇学穿搭打赢新年第一仗"
+                    },
+                ]
+            )
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

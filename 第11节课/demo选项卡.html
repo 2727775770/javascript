@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .banner{
+                position:relative;
+                width:780px;
+                height:330px;
+                margin:50px auto 0;
+                user-select: none;
+            }
+            .banner .banner-img,.banner .banner-img li,.banner .banner-img li img{
+                width:100%;;
+                height:100%;
+            }
+            .banner-img li{
+                display: none;
+                position: absolute;
+            }
+            .banner-img .show{
+                display: block;
+            }
+            .banner .banner-list{
+                height:50px;
+                background-color: #121112;
+                text-align: center;
+            }
+            .banner .banner-list li{
+                float:left;
+                width:20%;
+                height:100%;
+                color:white;
+                line-height: 50px;
+            }
+            .banner .banner-list li.active{
+                color:#ecc06c;
+                background-color: #303030;
+            }
+            .banner .left,.banner .right{
+                position: absolute;
+                top:50%;
+                width:50px;
+                height: 50px;
+                background-color:lightseagreen;
+                color:black;
+                font-size:25px;
+                text-align: center;
+                line-height: 50px;
+                opacity: 0.5;
+                z-index: 2;
+            }
+            .banner .left{
+                left:0;
+            }
+            .banner .right{
+                right:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="banner">
+            <div class="left"> &lt; </div>
+            <div class="right"> &gt; </div>
+            <ul class="banner-img">
+                <li class="show"><img src="img/1.jpg" height="330" width="780"/></li>
+                <li><img src="img/2.jpg" height="330" width="780"/></li>
+                <li><img src="img/3.jpg" height="330" width="780"/></li>
+                <li><img src="img/4.jpg" height="330" width="780"/></li>
+                <li><img src="img/5.jpg" height="330" width="780"/></li>
+            </ul>
+            <ul class="banner-list">
+                <li class="active">太空秘宝</li>
+                <li>7周年战斗之夜</li>
+                <li>星海浩瀚无畏扬帆</li>
+                <li>战斗之夜邀请函</li>
+                <li>玉剑传说限时销售</li>
+            </ul>
+        </div>
+        <script>
+            //设置变量
+            let aImg=document.querySelectorAll(".banner .banner-img li"),
+                aBannerlist=document.querySelectorAll(".banner .banner-list li"),
+                oLeft=document.querySelector(".banner .left"),
+                oRight=document.querySelector(".banner .right");
+            let len=aBannerlist.length,//li的长度
+                act=0;//设置初始的选中按钮的位置
+
+            (function () {
+                for(let i=0;i<len;i++){//设置5个点击按钮
+                    function change(i){
+                        aBannerlist[act].className="none";//当前的消失
+                        aImg[act].className="none";
+                        aBannerlist[i].className="active";//选中的显示
+                        aImg[i].className="show";
+                        act=i;//选中替代成当前
+                    }
+                    aBannerlist[i].onclick=function () {//设置5个点击按钮
+                        if(act===i)return;{//重复点击当前按钮不变化
+                            change(i);
+                        }
+                    }
+                }
+                oLeft.onclick=function () {//设置左切换
+                    let i=act;//设置一个传参数的变量，显示当前的序号
+                    i--;//左移动
+                    // if(i<0){
+                    //     i=len-1;//小于0回到最大
+                    // }
+                    i<0 && (i=len-1);
+                    change(i);
+                }
+                oRight.onclick=function () {//设置左切换
+                    let i=act;//设置一个传参数的变量，显示当前的序号
+                    i++;//右移动
+                    // if(i>len-1){
+                    //     i=0;//最大调到最小
+                    // }
+                    i>len-1 && (i=0);
+                    change(i);
+                }
+            })()
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

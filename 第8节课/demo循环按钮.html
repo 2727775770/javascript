@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述">
+    <meta name="author" content="潭州教育-阿飞老师">
+    <style>
+        body{font-family: "Microsoft YaHei",serif;}
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+        .banner {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            margin: 40px auto;
+            text-align:center;
+            user-select: none;
+        }
+        .banner .list{
+            width:100%;
+            height:100%;
+        }
+        .banner .list li{
+            display:none;
+            position:absolute;
+            width:100%;
+            height:100%;
+        }
+        .banner .list li img{
+            width:100%;
+            height:100%;
+        }
+        .banner .list .show{
+            display: block;
+        }
+        .banner .top,.banner .bottom{
+            position: absolute;
+            width:100%;
+            height:40px;
+            background-color: greenyellow;
+            color:lightseagreen;
+            font-size:25px;
+            font-weight: bold;
+            text-align:center;
+            letter-spacing: 2px;
+            line-height: 40px;
+            opacity:0.5;
+            cursor:pointer;
+        }
+        .banner .top{
+            top:0;
+        }
+        .banner .bottom{
+            bottom:0;
+        }
+        .banner .left-arrow,.banner .right-arrow{
+            position: absolute;
+            top:0;
+            bottom:0;
+            width:50px;
+            height:50px;
+            margin: auto;
+            background-color:aquamarine;
+            color:black;
+            font-size:30px;
+            text-align:center;
+            line-height:50px;
+            opacity: 0.8;
+            cursor:pointer;
+        }
+        .banner .left-arrow{
+            left:0;
+        }
+        .banner .right-arrow{
+            right:0;
+        }
+        .banner button{
+            display: inline-block;
+            width:100px;
+            height:40px;
+            margin-top:20px;
+            margin-right:30px;
+        }
+        .banner button.nor{
+            background-color: fuchsia;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <ul class="list">
+            <li class="show">
+                <img src="img/1.jpg" height="1200" width="675"/>
+            </li>
+            <li>
+                <img src="img/2.jpg" height="1024" width="724"/>
+            </li>
+            <li>
+                <img src="img/3.jpg" height="966" width="1024"/>
+            </li>
+            <li>
+                <img src="img/4.jpg" height="792" width="850"/>
+            </li>
+            <li>
+                <img src="img/5.jpg" height="673" width="1024"/>
+            </li>
+        </ul>
+        <p class="top"><span>1</span>/5</p>
+        <p class="bottom">背景1</p>
+        <span class="right-arrow"> &gt; </span>
+        <span class="left-arrow"> &lt; </span>
+        <button class="nor">正常播放</button>
+        <button class="loop">循环播放</button>
+    </div>
+    <script>
+        let aP=document.querySelectorAll(".banner p");
+        let oTop=document.querySelector(".banner p span");
+        let aSpan=document.querySelectorAll(".banner>span");
+        let aButton=document.querySelectorAll(".banner button");
+        let aImg=document.querySelectorAll(".banner .list li");
+        let index=0;
+        let nor=true;
+        let length=aImg.length-1;
+        let bottomText=["背景1","背景2","背景3","背景4","背景5"];
+
+        console.log(length);
+        aSpan[0].onclick = function(){
+                aImg[index].className="";
+                index++;
+                if(index>length) {
+                    // if (nor) {
+                    //     index = length;
+                    // } else {
+                    //     index = 0;
+                    // }
+                    index=nor?length:0;
+                }
+                aImg[index].className="show";
+                oTop.innerHTML=index+1;
+                aP[1].innerHTML=bottomText[index];
+            }
+        aSpan[1].onclick = function(){
+            aImg[index].className="";
+            index--;
+            if(index<0) {
+                index=nor?0:length;
+            }
+            aImg[index].className="show";
+            oTop.innerHTML=index+1;
+            aP[1].innerHTML=bottomText[index];
+        }
+        aButton[0].onclick=function () {
+            aButton[0].className="nor";
+            aButton[1].className="";
+            nor=true;
+        }
+        aButton[1].onclick=function () {
+            aButton[1].className="nor";
+            aButton[0].className="";
+            nor=false;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

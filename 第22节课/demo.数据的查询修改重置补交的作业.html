@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="潭州教育-阿飞老师">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+            .container{
+                width:500px;
+                height:260px;
+                padding:20px;
+                margin:100px auto 0;
+                border:1px solid #cc3366;
+                text-align: center;
+                user-select: none;
+            }
+            .container .title{
+                width: 100%;
+                margin-top:20px;
+
+                text-align: left;
+            }
+            .container .title p{
+                margin-bottom:10px;
+                text-indent: 2em;
+            }
+            .container .title p b{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <input type="text"/>
+            <input type="button" value="搜索"/>
+            <input type="text"/>
+            <input type="button" value="替换"/>
+            <input type="button" value="重置"/>
+            <div class="title">
+                <p>
+                    张家界是湖南省辖地级市，原名大庸市，辖2个市辖区（永定区、武陵源区）、
+                    2个县（慈利县、桑植县）。位于湖南西北部，澧水中上游，属武陵山区腹地。
+                    张家界因旅游建市，是中国最重要的旅游城市之一，
+                    是湘鄂渝黔革命根据地的发源地和中心区域。
+                </p>
+                <p>1982年9月，张家界国家森林公园成为中国第一个国家森林公园。</p>
+                <p>
+                    1988年8月，武陵源风景名胜区列入第二批国家重点风景名胜区；
+                    1992年，由张家界国家森林公园等三大景区构成的武陵源自然风景区被
+                    联合国教科文组织列入《世界自然遗产名录》；2004年2月，被列为中国
+                    首批《世界地质公园》；2007年，被列入中国首批5A级景区。
+                </p>
+            </div>
+        </div>
+        <script>
+            (function () {
+                //设置变量
+                let aInput=document.querySelectorAll(".container input"),
+                    oTitle=document.querySelector(".title");
+                let html=oTitle.innerHTML,//存储现在初始页面信息
+                    strathtml=oTitle.innerHTML;//存储初始页面信息
+                //搜索事件
+                aInput[1].onclick=function () {
+                    let search=aInput[0].value;//存储搜索词
+                    if(search==null)return;//搜索词为空退出;
+                    let cutout=html.split(search);//將页面信息以搜索词划分
+                    //cutout 是个对象object类型
+                    let newhtml=cutout.join("<b>"+search+"</b>");//以断点加样式关键词
+                    oTitle.innerHTML=newhtml;
+                };
+                //替换事件
+                aInput[3].onclick=function () {
+                    let search=aInput[0].value;//存储搜索词
+                    let replace=aInput[2].value;//存储替换词
+                    let cutout=html.split(search);//將页面信息以搜索词划分
+                    //cutout 是个对象object类型
+                    let newhtml=cutout.join("<b>"+replace+"</b>");
+                    oTitle.innerHTML=newhtml;
+                    html=cutout.join(replace);//改变后的内容存储为新的页面信息
+                };
+                //重置按钮
+                aInput[4].onclick=function () {
+                    aInput[0].value=null;
+                    aInput[2].value=null;
+                    oTitle.innerHTML=strathtml;//重置为初始内容
+                }
+           })()
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
